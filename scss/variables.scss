@@ -1,0 +1,50 @@
+﻿$font-family-poppins: 'Poppins', sans-serif;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-primary-bg: #059FFF;
+$hero-gradient-alt: linear-gradient(180deg, #1868D0 0%, #C157F2 100%);
+
+
+// FONT WEIGHT
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// FONT SIZE
+$font-size-80: 80px;
+$font-size-70: 70px;
+$font-size-67: 67px;
+$font-size-62: 62px;
+$font-size-60: 60px;
+$font-size-56: 56px;
+$font-size-50: 50px;
+$font-size-45: 45px;
+$font-size-40: 40px;
+$font-size-36: 36px;
+$font-size-35: 35px;
+$font-size-34: 34px;
+$font-size-33: 33px;
+$font-size-32: 32px;
+$font-size-30: 30px;
+$font-size-28: 28px;
+$font-size-26: 26px;
+$font-size-25: 25px;
+$font-size-24: 24px;
+$font-size-22: 22px;
+$font-size-20: 20px;
+$font-size-18: 18px;
+$font-size-17: 17px;
+$font-size-16: 16px;
+$font-size-15: 15px;
+$font-size-14: 14px;
+$font-size-13: 13px;
+$font-size-12: 12px;
+$font-size-10: 10px;
+
+// COMMON TYPE
+$font-base: $font-size-16;
+$heading-font-size: $font-size-40;
+$paragraph-font-size: $font-size-16;
