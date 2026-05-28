@@ -28,17 +28,10 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
   margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 40px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 p,
