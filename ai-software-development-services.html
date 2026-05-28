@@ -1,18 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Software Development Services</title>
-    <link rel="stylesheet" href="assets/css/ai-software-development-services.css" type="text/css" />
-</head>
-<body>
-  <!--#include virtual="/common/header.html" -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Software Development Services</title>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet"
+      href="assets/css/ai-software-development-services.css" type="text/css" />
+  </head>
+  <body>
 
-  <main>
-  </main>
+    <header class="siteHeader bg-black sticky-top" style="z-index:100;">
+      <nav
+        class="siteNav d-flex align-items-center justify-content-between position-relative"
+        style="max-width:1440px;margin:0 auto;padding:16px 40px;gap:24px;"
+        aria-label="Primary navigation">
 
-  <!--#include virtual="/common/footer.html" -->
-  <!--#include virtual="/common/common-js.html" -->
-</body>
+        <a href="/" class="siteLogo d-flex align-items-center"
+          aria-label="DITS home">
+          <img src="assets/images/logo.webp" alt="DITS"
+            style="height:40px;width:auto;" />
+        </a>
+
+        <input type="checkbox" id="siteMenuToggle" class="siteMenuToggle"
+          aria-label="Toggle menu" />
+
+        <label for="siteMenuToggle" class="siteMenuButton"
+          style="cursor:pointer;font-size:24px;color:#fff;">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </label>
+
+        <div class="siteMenu align-items-center text-uppercase"
+          style="gap:28px;">
+          <a href="/about-us" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">About
+            Us</a>
+          <a href="/services" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">Services</a>
+          <a href="/technologies" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">Technologies</a>
+          <a href="/industries" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">Industries</a>
+          <a href="/blogs" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">Blogs</a>
+          <a href="/portfolios" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">Portfolios</a>
+          <a href="/case-studies" class="text-decoration-none text-white"
+            style="font-size:14px;font-weight:500;white-space:nowrap;transition:0.3s ease;">Case
+            Studies</a>
+          <a href="/contact-us"
+            class="siteContact fw-medium text-decoration-none text-white"
+            style="border:1.5px solid #fff;padding:10px 22px;border-radius:6px;transition:0.3s ease;">Contact
+            Us</a>
+        </div>
+
+      </nav>
+    </header>
+
+    <section
+      class="heroSection position-relative overflow-hidden d-flex align-items-center">
+      <video class="heroVideoBg position-absolute top-0 start-0 w-100 h-100"
+        style="object-fit:cover;object-position:center;" autoplay muted loop
+        playsinline>
+        <source src="assets/images/banner-video.mp4" type="video/mp4" />
+      </video>
+      <div
+        class="heroOverlay position-absolute top-0 start-0 w-100 h-100"></div>
+      <div class="container">
+        <div class="row align-items-center heroRow position-relative">
+          <div class="col-lg-6 col-12 heroLeft">
+            <h1 class="fw-semibold text-white">AI Software
+              Development Services</h1>
+            <p class="text-white">
+              Build smart, automated, and data-based applications with our AI
+              app development services.
+              As a reliable custom AI development company, we assist
+              enterprises in designing, developing,
+              and deploying software that improves decision-making, reduces
+              costs, and optimizes business processes.
+            </p>
+            <a href="/contact-us"
+              class="heroBtn fw-semibold text-white text-decoration-none d-inline-block">Get
+              AI Consultation <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="col-lg-6 col-12 heroRight d-flex justify-content-center">
+            <img src="assets/images/banner-image.webp" alt="AI Robotic Hand"
+              class="img-fluid heroImg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="whoSection py-5 text-center">
+      <div class="container">
+
+        <div class="whoBadge d-inline-block fw-semibold mb-4"
+          style="color:#3958BD;background:#fff;padding:8px 24px;border-radius:50px;letter-spacing:0.5px;font-size:20px;">
+          Who Are We?
+        </div>
+
+        <h2 class="whoHeading fw-semibold text-black">
+          Digital Transformation Partner for
+          <br>
+          Digital-First Businesses
+        </h2>
+
+        <div class="row whoStats align-items-stretch justify-content-center"
+          style="row-gap:30px;margin-bottom:60px;">
+
+          <div class="col-lg col-md-4 col-sm-6 col-12">
+            <div class="whoStat d-flex flex-column h-100"
+              style="padding:16px 20px;text-align:left;border-right:1px solid #000;">
+              <div
+                class="whoStatIcon d-flex align-items-center justify-content-center"
+                style="width:56px;height:56px;margin-bottom:10px;flex-shrink:0;">
+                <img src="assets/images/svg/experience.svg"
+                  alt="Years of Experience" />
+              </div>
+              <div class="whoStatNumber fw-bold">150+</div>
+              <div class="whoStatLabel fw-medium">Years of Experience</div>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-4 col-sm-6 col-12">
+            <div class="whoStat d-flex flex-column h-100"
+              style="padding:16px 20px;text-align:left;border-right:1px solid #000;">
+              <div
+                class="whoStatIcon d-flex align-items-center justify-content-center"
+                style="width:56px;height:56px;margin-bottom:10px;flex-shrink:0;">
+                <img src="assets/images/svg/project.svg"
+                  alt="Projects Delivered" />
+              </div>
+              <div class="whoStatNumber fw-bold">1000+</div>
+              <div class="whoStatLabel fw-medium">Projects Delivered</div>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-4 col-sm-6 col-12">
+            <div class="whoStat d-flex flex-column h-100"
+              style="padding:16px 20px;text-align:left;border-right:1px solid #000;">
+              <div
+                class="whoStatIcon d-flex align-items-center justify-content-center"
+                style="width:56px;height:56px;margin-bottom:10px;flex-shrink:0;">
+                <img src="assets/images/svg/deployment.svg"
+                  alt="Deployment Success Rates" />
+              </div>
+              <div class="whoStatNumber fw-bold">96%</div>
+              <div class="whoStatLabel fw-medium">Deployment Success Rates</div>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-4 col-sm-6 col-12">
+            <div class="whoStat d-flex flex-column h-100"
+              style="padding:16px 20px;text-align:left;border-right:1px solid #000;">
+              <div
+                class="whoStatIcon d-flex align-items-center justify-content-center"
+                style="width:56px;height:56px;margin-bottom:10px;flex-shrink:0;">
+                <img src="assets/images/svg/clients.svg" alt="Happy Clients" />
+              </div>
+              <div class="whoStatNumber fw-bold">500+</div>
+              <div class="whoStatLabel fw-medium">Happy Clients</div>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-4 col-sm-6 col-12">
+            <div class="whoStat d-flex flex-column h-100"
+              style="padding:16px 20px;text-align:left;">
+              <div
+                class="whoStatIcon d-flex align-items-center justify-content-center"
+                style="width:56px;height:56px;margin-bottom:10px;flex-shrink:0;">
+                <img src="assets/images/svg/reduction.svg"
+                  alt="Reduction in Operational Overhead" />
+              </div>
+              <div class="whoStatNumber fw-bold">60%</div>
+              <div class="whoStatLabel fw-medium">Reduction in Operational
+                Overhead</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="whoCta d-flex align-items-center justify-content-between"
+          style="background:#325C80;border-radius:20px;padding:25px 50px;gap:32px;">
+          <h3 class="whoCtaHeading fw-bold text-white m-0">
+            Hire A Partner Not Just Engineers
+          </h3>
+          <a href="/contact-us"
+            class="whoCtaBtn fw-semibold text-white text-decoration-none d-inline-block"
+            style="background:linear-gradient(90deg,#059FFF 0%,#1192E2 100%);padding:14px 28px;border-radius:12px;white-space:nowrap;">
+            Hire A Partner Not Just Engineers
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="marqueeWrapper position-relative overflow-hidden py-3"
+      style="background:#d9f08a;">
+      <div class="marquee d-flex align-items-center"
+        style="white-space:nowrap;">
+        <div class="marqueeContent" id="marqueeContent">
+          <span>Rapid Healthcare Software Development <img class="img-fluid"
+              loading="lazy" src="assets/images/svg/slider-star.svg"
+              alt="Star" title="Star"></span>
+          <span>14 Days Prototype Development <img class="img-fluid"
+              loading="lazy" src="assets/images/svg/slider-star.svg"
+              alt="Star" title="Star"></span>
+          <span>Consultation, Development, Modernization, Integration, Support
+            <img class="img-fluid" loading="lazy"
+              src="assets/images/svg/slider-star.svg"
+              alt="Star" title="Star"></span>
+          <span class="tag">Scalable, Secure, Personalized, Patient Centric <img
+              class="img-fluid" loading="lazy"
+              src="assets/images/svg/slider-star.svg"
+              alt="Star" title="Star"></span>
+        </div>
+        <div class="marqueeContent" id="marqueeContentClone"></div>
+      </div>
+    </section>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/ai-software-development-services.js"></script>
+  </body>
 </html>

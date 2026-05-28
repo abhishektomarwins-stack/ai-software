@@ -1,7 +1,339 @@
-﻿@use 'variables' as *;
+@use 'variables' as *;
 @use 'common';
-@use 'header';
-@use 'footer';
-@use 'responsive';
 
+.siteHeader {
+    .siteNav {
+        @media (max-width: 991px) {
+            padding: 16px 24px !important;
+        }
 
+        @media (max-width: 576px) {
+            padding: 14px 16px !important;
+        }
+
+        .siteLogo img {
+            @media (max-width: 768px) {
+                height: 34px !important;
+            }
+
+            @media (max-width: 480px) {
+                height: 30px !important;
+            }
+        }
+
+        .siteMenuToggle {
+            display: none;
+        }
+
+        .siteMenuButton {
+            display: none;
+            @media (max-width: 991px) {
+                display: flex !important;
+            }
+        }
+
+        .siteMenu {
+            display: flex;
+            align-items: center;
+
+            a:hover {
+                color: $color-primary-bg;
+            }
+
+            @media (max-width: 1200px) {
+                gap: 20px !important;
+            }
+
+            @media (max-width: 991px) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #000;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0 !important;
+                padding: 16px 24px 24px;
+
+                a {
+                    width: 100%;
+                    padding: 14px 0;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                }
+            }
+
+            @media (max-width: 576px) {
+                padding: 16px;
+            }
+        }
+
+        .siteContact {
+            &:hover {
+                background: #fff;
+                color: #000 !important;
+            }
+
+            @media (max-width: 1200px) {
+                padding: 8px 18px !important;
+            }
+
+            @media (max-width: 991px) {
+                margin-top: 16px;
+                text-align: center;
+                border-bottom: none !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .siteMenuToggle:checked~.siteMenu {
+                display: flex;
+            }
+        }
+    }
+}
+
+.heroSection {
+    min-height: calc(100vh - 55px);
+
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 50px 0;
+        min-height: 100vh;
+    }
+
+    .heroLeft {
+        flex: 1 1 560px;
+        max-width: 620px;
+        padding-right: 40px;
+        padding-left: 0;
+
+        @media (max-width: 1200px) {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding-right: 0;
+            text-align: center;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-50;
+        line-height: 1.4;
+        margin-bottom: 18px;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-36;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $font-size-32;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-22;
+            line-height: 1.3;
+            margin-bottom: 14px;
+            padding: 0 10px;
+        }
+    }
+
+    p {
+        line-height: 1.85;
+        margin-bottom: 32px;
+
+        @media (max-width: 991px) {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $font-size-14;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-13;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+    }
+
+    .heroBtn {
+        background: $color-primary-bg;
+        font-size: $font-size-16;
+        padding: 14px 32px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(5, 159, 255, 0.35);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+        @media (max-width: 991px) {
+            display: block;
+            max-width: 320px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-13;
+            padding: 11px 16px;
+        }
+    }
+
+    .heroRight {
+        flex: 1 1 420px;
+
+        @media (max-width: 1200px) {
+            display: none !important;
+        }
+    }
+
+    .heroImg {
+        max-width: 460px;
+    }
+}
+
+.whoSection {
+    background: url('../images/who-bg.webp') center/cover no-repeat;
+
+    .whoHeading {
+        font-size: $font-size-40;
+        line-height: 1.3;
+        margin-bottom: 50px;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-30;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-22;
+            margin-bottom: 36px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .whoStats {
+        @media (max-width: 576px) {
+            row-gap: 0 !important;
+            margin-bottom: 40px !important;
+        }
+    }
+
+    .whoStat {
+        @media (max-width: 991px) {
+            border-right: none !important;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 16px 12px !important;
+            text-align: center !important;
+            align-items: center;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            padding: 14px 8px !important;
+        }
+    }
+
+    .whoStatIcon {
+        @media (max-width: 576px) {
+            width: 44px !important;
+            height: 44px !important;
+        }
+    }
+
+    .whoStatNumber {
+        font-size: $font-size-40;
+        background: $hero-gradient-alt;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+        margin-bottom: 8px;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-32;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 24px;
+        }
+    }
+
+    .whoStatLabel {
+        font-size: 11px;
+        line-height: 1.5;
+        max-width: 130px;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 10px;
+        }
+    }
+
+    .whoCta {
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 28px !important;
+        }
+
+        @media (max-width: 576px) {
+            padding: 28px 20px !important;
+        }
+    }
+
+    .whoCtaHeading {
+        font-size: $font-size-28;
+        line-height: 1.3;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-22;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 20px;
+        }
+    }
+
+    .whoCtaBtn {
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+}
+
+.marqueeContent {
+    display: inline-block;
+    animation: marqueeAnimation 20s linear infinite;
+
+    span {
+        margin-right: 60px;
+        font-size: 18px;
+        color: #1b1b1b;
+
+        img {
+            padding-left: 12px;
+        }
+
+        &.tag {
+            margin-right: 200px;
+        }
+    }
+}

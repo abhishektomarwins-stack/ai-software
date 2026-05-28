@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AI Software Development Services",
   "scripts": {
-    "scss": "sass scss/ai-software-development-services.scss assets/css/ai-software-development-services.css"
+    "scss": "sass --watch scss:assets/css"
   },
   "devDependencies": {
     "sass": "^1.69.0"
