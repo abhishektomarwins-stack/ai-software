@@ -31,3 +31,28 @@
             }
             animateMarquee();
         });
+
+
+        $(document).ready(function () {
+    $(".roadmapSlider").owlCarousel({
+        loop: false,
+        margin: 30,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 15
+            },
+            768: {
+                items: 2,
+                margin: 20
+            },
+            1200: {
+                items: 3,
+                margin: 30
+            }
+        }
+    });
+});

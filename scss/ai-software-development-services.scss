@@ -3,14 +3,6 @@
 
 .siteHeader {
     .siteNav {
-        @media (max-width: 991px) {
-            padding: 16px 24px !important;
-        }
-
-        @media (max-width: 576px) {
-            padding: 14px 16px !important;
-        }
-
         .siteLogo img {
             @media (max-width: 576px) {
                 height: 30px !important;
@@ -25,7 +17,10 @@
             display: none;
 
             @media (max-width: 991px) {
-                display: flex !important;
+                display: block;
+                color: $color-white;
+                font-size: 24px;
+                cursor: pointer;
             }
         }
 
@@ -36,8 +31,19 @@
             a:hover {
                 color: $color-primary-bg;
             }
+        }
 
-            @media (max-width: 991px) {
+        .siteContact {
+            &:hover {
+                background: $color-white;
+                color: $color-black !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            padding: 16px 24px !important;
+
+            .siteMenu {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -56,27 +62,22 @@
                 }
             }
 
-            @media (max-width: 576px) {
-                padding: 16px;
-            }
-        }
-
-        .siteContact {
-            &:hover {
-                background: $color-white;
-                color: $color-black !important;
-            }
-
-            @media (max-width: 991px) {
+            .siteContact {
                 margin-top: 16px;
                 text-align: center;
                 border-bottom: none !important;
             }
-        }
 
-        @media (max-width: 991px) {
             .siteMenuToggle:checked~.siteMenu {
                 display: flex;
+            }
+        }
+
+        @media (max-width: 576px) {
+            padding: 14px 16px !important;
+
+            .siteMenu {
+                padding: 16px;
             }
         }
     }
@@ -85,55 +86,23 @@
 .heroSection {
     min-height: calc(100vh - 55px);
 
-    @media (max-width: 1200px) {
-        padding: 80px 0;
-    }
-
-    @media (max-width: 576px) {
-        padding: 50px 0;
-        min-height: 100vh;
-    }
-
     .heroLeft {
         flex: 1 1 560px;
         max-width: 620px;
         padding-right: 40px;
         padding-left: 0;
-
-        @media (max-width: 1200px) {
-            flex: 1 1 100%;
-            max-width: 100%;
-            padding-right: 0;
-            text-align: center;
-        }
     }
 
     h1 {
         font-size: $font-size-50;
-        line-height: 1.4;
-        margin-bottom: 18px;
 
         @media (max-width: 991px) {
             font-size: $font-size-36;
         }
-
-        @media (max-width: 576px) {
-            font-size: $font-size-22;
-            line-height: 1.3;
-            margin-bottom: 14px;
-            padding: 0 10px;
-        }
     }
 
     p {
-        line-height: 1.85;
         margin-bottom: 32px;
-
-        @media (max-width: 576px) {
-            font-size: $font-size-13;
-            margin-bottom: 20px;
-            padding: 0 10px;
-        }
     }
 
     .heroBtn {
@@ -150,81 +119,67 @@
             margin: 0 auto;
             text-align: center;
         }
-
-        @media (max-width: 576px) {
-            font-size: $font-size-13;
-            padding: 11px 16px;
-        }
     }
 
     .heroRight {
         flex: 1 1 420px;
-
-        @media (max-width: 1200px) {
-            display: none !important;
-        }
     }
 
     .heroImg {
         max-width: 460px;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+
+        .heroLeft {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        .heroRight {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 50px 0;
+        min-height: 100vh;
+
+        h1 {
+            font-size: $font-size-22;
+            margin-bottom: 14px;
+            padding: 0 10px;
+        }
+
+        p {
+            font-size: $font-size-13;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .heroBtn {
+            font-size: $font-size-13;
+            padding: 11px 16px;
+        }
     }
 }
 
 .whoSection {
     background: url('../images/who-bg.webp') center/cover no-repeat;
 
-    @media (max-width: 991px) {
-        padding: 60px 0;
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
-
     .whoHeading {
         font-size: $font-size-40;
-        line-height: 1.3;
         margin-bottom: 50px;
-
-        @media (max-width: 576px) {
-            font-size: $font-size-22;
-            margin-bottom: 36px;
-
-            br {
-                display: none;
-            }
-        }
-    }
-
-    .whoStats {
-        @media (max-width: 576px) {
-            row-gap: 0 !important;
-            margin-bottom: 40px !important;
-        }
     }
 
     .whoStat {
-        @media (max-width: 991px) {
-            border-right: none !important;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 16px 12px !important;
-            text-align: center !important;
-            align-items: center;
-
-            &:last-child {
+        &:last-child {
+            @media (max-width: 991px) {
                 border-bottom: none;
             }
-        }
-
-        @media (max-width: 576px) {
-            padding: 14px 8px !important;
-        }
-    }
-
-    .whoStatIcon {
-        @media (max-width: 576px) {
-            width: 44px !important;
-            height: 44px !important;
         }
     }
 
@@ -234,59 +189,93 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        line-height: 1.1;
         margin-bottom: 8px;
-
-        @media (max-width: 576px) {
-            font-size: $font-size-24;
-        }
     }
 
     .whoStatLabel {
         font-size: 11px;
-        line-height: 1.5;
         max-width: 130px;
-
-        @media (max-width: 991px) {
-            max-width: 100%;
-        }
-
-        @media (max-width: 576px) {
-            font-size: $font-size-10;
-        }
-    }
-
-    .whoCta {
-        @media (max-width: 576px) {
-            flex-direction: column;
-            text-align: center;
-            padding: 28px 20px !important;
-        }
     }
 
     .whoCtaHeading {
         font-size: $font-size-28;
-        line-height: 1.3;
-
-        @media (max-width: 991px) {
-            font-size: $font-size-24;
-        }
-
-        @media (max-width: 576px) {
-            font-size: $font-size-20;
-        }
     }
 
     .whoCtaBtn {
         &:hover {
             transform: translateY(-2px);
         }
+    }
 
-        @media (max-width: 991px) {
-            font-size: $font-size-14;
+    @media (max-width: 991px) {
+        padding: 60px 0;
+
+        .whoStat {
+            border-right: none !important;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 16px 12px !important;
+            text-align: center !important;
+            align-items: center;
         }
 
-        @media (max-width: 576px) {
+        .whoStatLabel {
+            max-width: 100%;
+        }
+
+        .whoCtaHeading {
+            font-size: $font-size-24;
+        }
+
+        .whoCtaBtn {
+            font-size: $font-size-14;
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+
+        .whoHeading {
+            font-size: $font-size-22;
+            margin-bottom: 36px;
+
+            br {
+                display: none;
+            }
+        }
+
+        .whoStats {
+            row-gap: 0 !important;
+            margin-bottom: 40px !important;
+        }
+
+        .whoStat {
+            padding: 14px 8px !important;
+        }
+
+        .whoStatIcon {
+            width: 44px !important;
+            height: 44px !important;
+        }
+
+        .whoStatNumber {
+            font-size: $font-size-24;
+        }
+
+        .whoStatLabel {
+            font-size: $font-size-10;
+        }
+
+        .whoCta {
+            flex-direction: column;
+            text-align: center;
+            padding: 28px 20px !important;
+        }
+
+        .whoCtaHeading {
+            font-size: $font-size-20;
+        }
+
+        .whoCtaBtn {
             width: 100%;
             font-size: $font-size-12;
         }
@@ -318,92 +307,84 @@
     padding: 90px 0;
 
     @media (max-width: 991px) {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     @media (max-width: 576px) {
         padding: 40px 0;
     }
 
-    .container {
-        position: relative;
-        z-index: 1;
+    .heroVideoBg {
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
     }
 
     .solutionsHeading {
-        font-size: $font-size-40;
-        line-height: 1.15;
         margin-bottom: 0;
-        text-align: left;
+        font-size: $font-size-40;
 
         @media (max-width: 991px) {
-            font-size: $font-size-32;
-            text-align: center;
             margin-bottom: 24px;
+            text-align: center;
+            font-size: $font-size-32;
         }
 
         @media (max-width: 576px) {
-            font-size: $font-size-24;
-            line-height: 1.3;
             margin-bottom: 16px;
+            font-size: $font-size-24;
         }
     }
 
     .solutionsIntro {
-        font-size: $font-size-16;
-        line-height: 1.65;
         max-width: 480px;
         margin-left: auto;
-        text-align: left;
-        color: rgba(255, 255, 255, 0.9);
+        font-size: $font-size-16;
+        color: rgba($color-white, 0.9);
 
         @media (max-width: 991px) {
+            max-width: 100%;
             margin-left: 0;
             text-align: center;
-            max-width: 100%;
             font-size: $font-size-15;
-            line-height: 1.6;
         }
 
         @media (max-width: 576px) {
-            font-size: $font-size-13;
-            line-height: 1.5;
             padding: 0 16px;
+            font-size: $font-size-13;
         }
     }
 
     .solutionsCard {
         position: relative;
-        background: #95AEE57A;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 12px;
-        padding: 32px 28px;
         min-height: 100%;
+        padding: 32px 28px;
+        border-radius: 12px;
+        background: rgba(149, 174, 229, 0.48);
+        border: 1px solid rgba($color-white, 0.18);
         box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(20px);
+        transition: background 0.3s ease;
 
         &:hover {
             background: #95AEE5;
-
         }
 
         h3 {
+            margin-bottom: 16px;
             color: $color-white;
             font-size: $font-size-20;
-            line-height: 1.25;
-            margin-bottom: 16px;
         }
 
         hr {
+            margin: 0 0 20px;
             border: 0;
             border-top: 2px solid $color-white;
-            margin: 0 0 20px;
         }
 
         p {
-            color: rgba(255, 255, 255, 0.88);
-            line-height: 1.8;
             margin: 0;
+            color: rgba($color-white, 0.88);
         }
 
         @media (max-width: 768px) {
@@ -415,12 +396,20 @@
 .solutionCta {
     margin-top: -60px;
 
-    .ctaWrapper {
-        background: url("../images/custom-bg.webp") center center / cover no-repeat;
-        border-radius: 18px;
-        padding: 44px 60px;
+    @media (max-width: 991px) {
+        margin-top: -40px;
+    }
 
-        @media (max-width:720px) {
+    @media (max-width: 576px) {
+        margin-top: -20px;
+    }
+
+    .ctaWrapper {
+        padding: 44px 60px;
+        border-radius: 18px;
+        background: url("../images/custom-bg.webp") center center / cover no-repeat;
+
+        @media (max-width: 720px) {
             padding: 30px 20px;
         }
     }
@@ -434,22 +423,28 @@
         }
 
         h3 {
-            font-size: $font-size-30;
-            line-height: 1.1;
-            font-weight: $font-weight-bold;
             color: #111;
+            font-size: $font-size-30;
+            font-weight: $font-weight-bold;
 
             @media (max-width: 540px) {
                 font-size: $font-size-22;
-                line-height: 1.2;
+            }
+        }
+
+        p {
+            font-size: $font-size-16;
+
+            @media (max-width: 576px) {
+                font-size: $font-size-14;
             }
         }
 
         .heroBtn {
-            background: $color-primary-bg;
-            font-size: $font-size-16;
             padding: 14px 32px;
             border-radius: 15px;
+            background: $color-primary-bg;
+            font-size: $font-size-16;
 
             @media (max-width: 991px) {
                 display: block;
@@ -459,15 +454,16 @@
             }
 
             @media (max-width: 576px) {
-                font-size: $font-size-13;
                 padding: 11px 16px;
+                font-size: $font-size-13;
             }
         }
     }
 
     .rightImg {
         position: absolute;
-        right: -12px;
+        right: -2px;
+        bottom: 52px;
         width: 100%;
         max-width: 400px;
 
@@ -477,8 +473,8 @@
     }
 }
 
-.aiSolutionsSection {
-    padding: 80px 0;
+.servicesSection {
+    padding: 50px 0;
 
     @media (max-width: 991px) {
         padding: 60px 0;
@@ -497,13 +493,11 @@
         }
     }
 
-
     .sectionHeading {
+        margin-bottom: 24px;
         color: $color-black;
         font-size: $font-size-40;
         font-weight: $font-weight-bold;
-        line-height: 1.2;
-        margin-bottom: 24px;
 
         @media (max-width: 991px) {
             font-size: 42px;
@@ -517,7 +511,6 @@
     .sectionDescription {
         color: $color-black;
         font-size: $font-size-16;
-        line-height: 1.8;
 
         @media (max-width: 576px) {
             font-size: $font-size-15;
@@ -526,23 +519,10 @@
 
     .aiSolutionItem {
         padding: 32px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        border-bottom: 1px solid rgba($color-black, 0.25);
 
         @media (max-width: 767px) {
             row-gap: 24px;
-        }
-    }
-
-    .aiSolutionImage {
-
-        height: 180px;
-        object-fit: cover;
-        display: block;
-        border-radius: 8px;
-
-        @media (max-width: 767px) {
-            max-width: 100%;
-            height: auto;
         }
     }
 
@@ -568,23 +548,17 @@
     }
 
     .aiSolutionTag {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
         padding: 8px 16px;
-        background: linear-gradient(90deg, #5D7CFF 0%, #C86EFF 100%);
-        color: $color-white;
         border-radius: 5px;
-        font-size: $font-size-15;
-        font-weight: $font-weight-medium;
-        white-space: nowrap;
+        background: linear-gradient(90deg, #5D7CFF 0%, #C86EFF 100%);
+        color: #ffffff;
+
     }
 
     .aiSolutionHeading {
         color: $color-black;
         font-size: $font-size-28;
         font-weight: $font-weight-semibold;
-        line-height: 1.3;
 
         @media (max-width: 991px) {
             font-size: $font-size-24;
@@ -598,7 +572,6 @@
     .aiSolutionDescription {
         color: $color-black;
         font-size: $font-size-16;
-        line-height: 1.8;
 
         @media (max-width: 576px) {
             font-size: $font-size-15;
@@ -607,9 +580,7 @@
 }
 
 .industrySection {
-    position: relative;
-    padding: 80px 0;
-    overflow: hidden;
+    padding: 50px 0;
     background: url("../images/ai-bg.webp") center center / cover no-repeat;
 
     @media (max-width: 991px) {
@@ -621,8 +592,6 @@
     }
 
     .industryContent {
-        position: relative;
-        z-index: 2;
         margin-bottom: 60px;
 
         @media (max-width: 767px) {
@@ -631,29 +600,26 @@
     }
 
     .industryTitle {
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.2;
+        color: $color-white;
+        font-weight: $font-weight-bold;
+
 
         @media (max-width: 991px) {
-            font-size: 28px;
+            font-size: $font-size-28;
         }
 
         @media (max-width: 576px) {
-            font-size: 22px;
+            font-size: $font-size-22;
         }
     }
 
     .industryDescription {
         margin-bottom: 0;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 16px;
-        line-height: 1.7;
+        color: rgba($color-white, 0.9);
+        font-size: $font-size-16;
 
         @media (max-width: 576px) {
-            font-size: 14px;
+            font-size: $font-size-14;
         }
     }
 
@@ -661,7 +627,7 @@
         position: relative;
         z-index: 2;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba($color-white, 0.12);
         border-radius: 24px;
         backdrop-filter: blur(14px);
     }
@@ -670,7 +636,7 @@
         position: relative;
         height: 100%;
         padding: 30px 25px;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba($color-white, 0.2);
         backdrop-filter: blur(14px);
 
         @media (max-width: 991px) {
@@ -686,51 +652,44 @@
         display: inline-block;
         margin-bottom: 24px;
         color: transparent;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 1;
+        font-size: $font-size-50;
+        font-weight: $font-weight-bold;
         transform: rotate(-91deg);
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+        -webkit-text-stroke: 1px rgba($color-white, 0.7);
 
         @media (max-width: 576px) {
-            font-size: 44px;
             margin-bottom: 16px;
+            font-size: $font-size-45;
         }
     }
 
     .industryCardTitle {
         margin-bottom: 12px;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: 600;
+        color: $color-white;
+        font-size: $font-size-20;
+        font-weight: $font-weight-semibold;
 
         @media (max-width: 767px) {
-            font-size: 18px;
+            font-size: $font-size-18;
         }
     }
 
     .industryCardText {
         margin-bottom: 0;
         color: $color-white;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.7;
+        font-size: $font-size-16;
+        font-weight: $font-weight-regular;
 
         @media (max-width: 576px) {
-            font-size: 14px;
+            font-size: $font-size-14;
         }
     }
 }
 
 .aiSolutionSection {
     position: relative;
-    padding: 80px 0;
-    overflow: hidden;
+    padding: 50px 0;
     background: url("../images/common-bg.webp") center center / cover no-repeat;
-
-    @media (max-width: 991px) {
-        padding: 60px 0;
-    }
 
     @media (max-width: 576px) {
         padding: 40px 0;
@@ -751,19 +710,14 @@
             padding: 20px 60px;
             border-radius: 15px;
             background: fixed url("../images/future-bg.webp") center center / cover no-repeat;
-            overflow: hidden;
-
-            @media (max-width: 991px) {
-                padding: 40px 30px;
-            }
-
-            @media (max-width: 576px) {
-                padding: 30px 20px;
-            }
         }
 
         .ctaImageWrapper {
             text-align: center;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
 
         .ctaContent {
@@ -776,50 +730,39 @@
 
             h3 {
                 margin-bottom: 20px;
-                color: #000;
+                color: $color-black;
                 font-size: 38px;
-                font-weight: 600;
-                line-height: 1.1;
-
-                @media (max-width: 991px) {
-                    font-size: 32px;
-                }
+                font-weight: $font-weight-semibold;
 
                 @media (max-width: 767px) {
-                    font-size: 28px;
+                    font-size: $font-size-28;
                 }
 
-                @media (max-width: 576px) {
-                    font-size: 22px;
-                }
             }
 
             p {
                 margin-bottom: 30px;
                 color: #222;
-                font-size: 16px;
-                line-height: 1.7;
+                font-size: $font-size-16;
 
                 @media (max-width: 576px) {
-                    font-size: 14px;
+                    font-size: $font-size-14;
                 }
             }
 
             .heroBtn {
                 padding: 15px 34px;
                 border-radius: 16px;
-                background: linear-gradient(
-                    90deg,
-                    #0f8cff 0%,
-                    #139df4 100%
-                );
-                color: #fff;
-                font-size: 18px;
-                font-weight: 600;
+                background: linear-gradient(90deg,
+                        #0f8cff 0%,
+                        #139df4 100%);
+                color: $color-white;
+                font-size: $font-size-18;
+                font-weight: $font-weight-semibold;
 
                 @media (max-width: 576px) {
                     padding: 12px 24px;
-                    font-size: 15px;
+                    font-size: $font-size-15;
                 }
             }
         }
@@ -837,28 +780,25 @@
 
         .solutionTitle {
             margin-bottom: 0;
-            color: #ffffff;
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.15;
+            color: $color-white;
+            font-size: $font-size-36;
+            font-weight: $font-weight-medium;
 
             @media (max-width: 991px) {
-                font-size: 28px;
+                font-size: $font-size-28;
             }
 
             @media (max-width: 576px) {
-                font-size: 22px;
+                font-size: $font-size-22;
             }
         }
 
         .solutionDescription {
-            margin-bottom: 0;
             color: rgba(255, 255, 255, 0.82);
-            font-size: 17px;
-            line-height: 1.8;
+            font-size: $font-size-17;
 
             @media (max-width: 576px) {
-                font-size: 14px;
+                font-size: $font-size-14;
             }
         }
 
@@ -873,9 +813,8 @@
         .solutionCard {
             height: 100%;
             padding: 38px 28px;
-            border:1px solid rgba(255, 255, 255, 0.12) ;
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
-            background: rgba(18, 15, 44, 0.35);
             backdrop-filter: blur(20px);
             transition: 0.3s ease;
 
@@ -887,14 +826,10 @@
             @media (max-width: 991px) {
                 border-right: 0;
             }
-
-            @media (max-width: 767px) {
-                padding: 30px 22px;
-            }
         }
 
         .solutionIcon {
-            margin-bottom: 26px;
+            margin-bottom: 20px;
 
             img {
                 width: 42px;
@@ -905,25 +840,620 @@
 
         .solutionCardTitle {
             margin-bottom: 14px;
-            color: #ffffff;
-            font-size: 24px;
-            line-height: 1.35;
+            color: $color-white;
+            font-size: $font-size-24;
 
             @media (max-width: 991px) {
-                font-size: 20px;
+                font-size: $font-size-20;
             }
 
             @media (max-width: 576px) {
-                font-size: 18px;
+                font-size: $font-size-18;
             }
         }
 
         .solutionCardText {
             margin-bottom: 0;
             color: $color-white;
-            font-size: 15px;
-            line-height: 1.8;
+            font-size: $font-size-15;
             font-weight: 400;
         }
     }
-}   
+}
+
+.roadmapSection {
+    padding: 80px 0;
+    background: linear-gradient(90deg,
+            #d8e8f4 0%,
+            #edf0f7 50%,
+            #d9f2ff 100%);
+    position: relative;
+    overflow: hidden;
+
+    .roadmapImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 20px;
+
+        img {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            border-radius: 24px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+        }
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+
+    .roadmapContent {
+
+        .roadmapTitle {
+            font-size: $font-size-40;
+            color: $color-black;
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .roadmapDescription {
+            font-size: $font-size-18;
+            color: #444;
+            margin-bottom: 40px;
+            max-width: 900px;
+            line-height: 1.6;
+        }
+    }
+
+    .owl-carousel.owl-theme.roadmapSlider.owl-loaded.owl-drag {
+        border-bottom: 5px solid #474CB5;
+    }
+
+    .roadmapSlider {
+        position: relative;
+        padding-bottom: 5px;
+
+        .owl-stage {
+            display: flex;
+        }
+
+        .owl-item {
+            height: auto;
+
+            &:nth-child(3n+1) .roadmapStepItem::after {
+                background: #009cff;
+            }
+
+            &:nth-child(3n+2) .roadmapStepItem::after {
+                background: #ff2e93;
+            }
+
+            &:nth-child(3n+3) .roadmapStepItem::after {
+                background: #7a43ff;
+            }
+        }
+
+        .roadmapStepItem {
+            padding-bottom: 35px;
+            position: relative;
+            height: 100%;
+            transition: all 0.3s ease;
+
+            .stepNumber {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: linear-gradient(180deg,
+                        #8fd9ff 0%,
+                        #57a9ff 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-size-24;
+                font-weight: $font-weight-bold;
+                color: $color-white;
+                margin-bottom: 24px;
+                box-shadow: 0 4px 10px rgba(87, 169, 255, 0.3);
+            }
+
+            .stepTitle {
+                font-size: $font-size-22;
+                font-weight: $font-weight-bold;
+                color: $color-black;
+                margin-bottom: 12px;
+            }
+
+            .stepDescription {
+                font-size: $font-size-15;
+                color: #555;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -5px;
+                height: 5px;
+                background: transparent;
+                transition: opacity 0.25s ease;
+                z-index: 10;
+            }
+        }
+
+        .owl-nav {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        padding: 60px 0;
+
+        .roadmapContent {
+            padding-left: 0;
+
+            .roadmapTitle {
+                font-size: $font-size-28;
+            }
+
+            .roadmapDescription {
+                font-size: $font-size-15;
+                margin-bottom: 28px;
+            }
+        }
+
+        .roadmapSlider {
+            .roadmapStepItem {
+                padding-right: 16px;
+                padding-bottom: 24px;
+
+                .stepNumber {
+                    width: 44px;
+                    height: 44px;
+                    font-size: $font-size-22;
+                }
+
+                .stepTitle {
+                    font-size: $font-size-20;
+                }
+
+                .stepDescription {
+                    font-size: $font-size-14;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+
+        .roadmapContent {
+            .roadmapTitle {
+                font-size: $font-size-24;
+            }
+
+            .roadmapDescription {
+                font-size: $font-size-14;
+            }
+        }
+
+        .roadmapSlider {
+            .roadmapStepItem {
+                padding-right: 12px;
+                padding-bottom: 22px;
+
+                .stepNumber {
+                    width: 40px;
+                    height: 40px;
+                    font-size: $font-size-20;
+                    margin-bottom: 18px;
+                }
+
+                .stepTitle {
+                    font-size: $font-size-18;
+                }
+
+                .stepDescription {
+                    font-size: $font-size-13;
+                }
+            }
+        }
+    }
+}
+
+.aiHeroSection {
+    background: radial-gradient(circle at center,
+            rgba(122, 67, 255, 0.9) 0%,
+            rgba(15, 15, 35, 0.95) 45%,
+            #000 100%),
+        #000;
+
+    .heroTitle {
+        font-size: $font-size-36;
+        font-weight: $font-weight-medium;
+        width: 100%;
+        max-width: 600px;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-18;
+            text-align: center;
+        }
+    }
+
+    .techStackWrapper {
+        background: #e8f5ff;
+
+        @media (max-width: 767px) {
+            padding: 20px !important;
+        }
+    }
+
+    .techStackItem {
+        background: $color-white;
+        border-radius: 18px;
+        padding: 6px 16px;
+        font-size: $font-size-16;
+        font-weight: $font-weight-medium;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            justify-content: center;
+            font-size: $font-size-16;
+            border-radius: 12px;
+        }
+    }
+
+    .avatar {
+        position: relative;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+
+        .chatBubble {
+            animation: floatBubble 6s ease-in-out infinite;
+
+            &.bubbleBlue {
+                animation-delay: 0s;
+            }
+
+            &.bubbleWhite {
+                animation-delay: 3s;
+            }
+        }
+    }
+
+    @keyframes floatBubble {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    .robotCol {
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    .contentCol {
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+    }
+
+    .heroContent {
+
+        @media (max-width: 1200px) {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mainHeading {
+            font-size: $font-size-32;
+
+            @media (max-width: 991px) {
+                font-size: $font-size-16;
+            }
+        }
+
+        .heroDescription {
+            color: rgba($color-white, 0.8);
+            font-size: $font-size-16;
+            max-width: 700px;
+
+            @media (max-width: 991px) {
+                margin: auto;
+            }
+
+            @media (max-width: 767px) {
+                font-size: $font-size-14;
+            }
+        }
+
+        .heroButton {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            border: 0;
+            background: linear-gradient(90deg, #1b7cff 0%, #2ec5ff 100%);
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            font-size: $font-size-16;
+            padding: 12px 20px;
+        }
+
+        @media (max-width: 575px) {
+            width: fit-content;
+        }
+    }
+}
+
+.aiCostSection {
+    background: url("../images/cost-banner.webp") center center / cover no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    .costTitle {
+        font-size: clamp(22px, 4vw, 32px);
+        color: $color-black;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .costDescription {
+        max-width: 1050px;
+        font-size: clamp(14px, 2vw, 16px);
+        color: #444;
+    }
+
+    .costWrapper {
+        padding: clamp(20px, 4vw, 60px);
+        border-radius: 15px;
+        background: rgba($color-white, 0.4);
+
+        .costCard {
+            padding: clamp(18px, 3vw, 24px);
+            border-radius: 10px;
+            background: $color-white;
+            transition: 0.3s ease;
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 3px solid #035BDE;
+                transform: scale(1.05);
+            }
+
+            .cardTitle {
+                font-size: clamp(20px, 3vw, 26px);
+                color: #1f1b4d;
+                margin-bottom: 20px;
+            }
+
+            .costList {
+                margin-bottom: 30px;
+
+                li {
+                    margin-bottom: 10px;
+                    font-size: clamp(14px, 2vw, 14px);
+                    color: #6b6789;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+
+                    i {
+                        width: 28px;
+                        height: 28px;
+                        min-width: 28px;
+                        border-radius: 50%;
+                        background: #efe7ff;
+                        color: #bb6cff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: $font-size-12;
+                        margin-top: 2px;
+                    }
+                }
+            }
+
+            .estimateButton {
+                padding: 10px 18px;
+                border-radius: 14px;
+                background: linear-gradient(90deg, #1593ff 0%, #0d6efd 100%);
+                color: $color-white;
+                font-size: clamp(14px, 2vw, 18px);
+                font-weight: $font-weight-medium;
+                border: 0;
+
+                &:hover {
+                    color: $color-white;
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 60px 0;
+
+        .estimateButton {
+            width: 100%;
+        }
+    }
+}
+
+.startYourDream {
+  background:
+    linear-gradient(180deg, rgba(32, 41, 44, 0) 0%, #000000 100%),
+    url(../images/ai/start-your-dream.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 173px 0;
+ 
+  @media (max-width: 991px) {
+    padding: 100px 0;
+  }
+ 
+  @media (max-width: 767px) {
+    padding: 60px 0;
+  }
+ 
+  @media (max-width: 576px) {
+    padding: 45px 0 10px;
+  }
+ 
+  h2 {
+    font-size: 100px;
+    line-height: 1;
+    margin: auto;
+    max-width: 840px;
+    text-align: center;
+    background: radial-gradient(
+      100.97% 265.86% at 110.31% -37.64%,
+      #fab8ff 0%,
+      #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ 
+    @media (max-width: 991px) {
+      font-size: $font-size-60;
+    }
+ 
+    @media (max-width: 767px) {
+      font-size: $font-size-40 !important;
+      line-height: 1.2 !important;
+    }
+  }
+}
+ 
+.developmentPartner {
+  padding: 90px 0;
+  background-color: #000000;
+ 
+  @media (max-width: 767px) {
+    padding: 45px 0;
+  }
+ 
+  .heading {
+    h2,
+    p {
+      color: $color-white;
+    }
+  }
+ 
+  .developmentFirmCarousel {
+    padding-top: 110px;
+ 
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+ 
+      .developmentList {
+        background: #222222;
+        padding: 40px 40px 0px;
+        border-radius: 18px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.5s;
+        position: sticky;
+        z-index: 1;
+        display: flex;
+        align-items: start;
+        gap: 15px;
+ 
+        &:nth-child(1) {
+          top: 116px;
+          z-index: 1;
+        }
+ 
+        &:nth-child(2) {
+          top: 132px;
+          z-index: 2;
+        }
+ 
+        &:nth-child(3) {
+          top: 148px;
+          z-index: 3;
+        }
+ 
+        &:nth-child(4) {
+          top: 164px;
+          z-index: 4;
+        }
+ 
+        &:nth-child(5) {
+          top: 180px;
+          z-index: 5;
+        }
+ 
+        &:nth-child(6) {
+          top: 196px;
+          z-index: 6;
+        }
+ 
+        &:last-child {
+          margin: 0;
+        }
+ 
+        @media (max-width: 767px) {
+          flex-direction: column;
+          position: static;
+          padding: 20px 25px;
+        }
+ 
+        .developmentContent {
+          max-width: 540px;
+ 
+          @media (max-width: 991px) {
+            max-width: 340px;
+          }
+ 
+          @media (max-width: 767px) {
+            max-width: 100%;
+          }
+ 
+          h3 {
+            font-family: $font-weight-bold;
+            color: $color-white;
+            margin-bottom: 11px;
+ 
+            @media (max-width: 575px) {
+              font-size: $font-size-18;
+            }
+          }
+ 
+          P {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
