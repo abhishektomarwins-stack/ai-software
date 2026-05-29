@@ -86,6 +86,25 @@
 .heroSection {
     min-height: calc(100vh - 55px);
 
+    .heroVideoBg {
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+
+    .heroOverlay {
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    @media (max-width: 991px) {
+        background: radial-gradient(circle at 70% 30%, #1e264a 0%, #060810 100%), #060810 !important;
+    }
+
     .heroLeft {
         flex: 1 1 560px;
         max-width: 620px;
@@ -222,12 +241,23 @@
             max-width: 100%;
         }
 
+        .whoCta {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 24px !important;
+            gap: 20px !important;
+        }
+
         .whoCtaHeading {
             font-size: $font-size-24;
         }
 
         .whoCtaBtn {
             font-size: $font-size-14;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            text-align: center;
         }
     }
 
@@ -308,6 +338,7 @@
 
     @media (max-width: 991px) {
         padding: 50px 0;
+        background: radial-gradient(circle at center, #141c36 0%, #070912 100%), #070912 !important;
     }
 
     @media (max-width: 576px) {
@@ -357,7 +388,7 @@
 
     .solutionsCard {
         position: relative;
-        min-height: 100%;
+        height: 100%;
         padding: 32px 28px;
         border-radius: 12px;
         background: rgba(149, 174, 229, 0.48);
@@ -385,10 +416,6 @@
         p {
             margin: 0;
             color: rgba($color-white, 0.88);
-        }
-
-        @media (max-width: 768px) {
-            min-height: auto;
         }
     }
 }
@@ -521,6 +548,17 @@
         padding: 32px 0;
         border-bottom: 1px solid rgba($color-black, 0.25);
 
+        @media (max-width: 991px) {
+            .col-md-5 {
+                display: none !important;
+            }
+            .col-md-7 {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
         @media (max-width: 767px) {
             row-gap: 24px;
         }
@@ -640,11 +678,39 @@
         backdrop-filter: blur(14px);
 
         @media (max-width: 991px) {
-            border-right: 0;
+            border-right: none;
+            border-bottom: 1px solid rgba($color-white, 0.2);
         }
 
         @media (max-width: 767px) {
             padding: 40px 24px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .industryCardWrapper {
+            .row > div {
+                &:nth-child(odd) .industryCard {
+                    border-right: 1px solid rgba($color-white, 0.2) !important;
+                }
+                &:nth-child(5) .industryCard,
+                &:nth-child(6) .industryCard {
+                    border-bottom: none !important;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .industryCardWrapper {
+            .row > div {
+                .industryCard {
+                    border-right: none !important;
+                }
+                &:last-child .industryCard {
+                    border-bottom: none !important;
+                }
+            }
         }
     }
 
@@ -710,6 +776,11 @@
             padding: 20px 60px;
             border-radius: 15px;
             background: fixed url("../images/future-bg.webp") center center / cover no-repeat;
+
+            @media (max-width: 991px) {
+                background-attachment: scroll !important;
+                padding: 35px 24px !important;
+            }
         }
 
         .ctaImageWrapper {
@@ -1105,10 +1176,9 @@
         font-weight: $font-weight-medium;
 
         @media (max-width: 767px) {
-            width: 100%;
-            justify-content: center;
-            font-size: $font-size-16;
+            font-size: $font-size-14;
             border-radius: 12px;
+            padding: 6px 12px;
         }
     }
 

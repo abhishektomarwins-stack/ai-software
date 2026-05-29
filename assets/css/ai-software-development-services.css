@@ -111,6 +111,23 @@ li {
 .heroSection {
   min-height: calc(100vh - 55px);
 }
+.heroSection .heroVideoBg {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.heroSection .heroOverlay {
+  z-index: 1;
+}
+.heroSection .container {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .heroSection {
+    background: radial-gradient(circle at 70% 30%, #1e264a 0%, #060810 100%), #060810 !important;
+  }
+}
 .heroSection .heroLeft {
   flex: 1 1 560px;
   max-width: 620px;
@@ -229,11 +246,21 @@ li {
   .whoSection .whoStatLabel {
     max-width: 100%;
   }
+  .whoSection .whoCta {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 24px !important;
+    gap: 20px !important;
+  }
   .whoSection .whoCtaHeading {
     font-size: 24px;
   }
   .whoSection .whoCtaBtn {
     font-size: 14px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media (max-width: 576px) {
@@ -302,6 +329,7 @@ li {
 @media (max-width: 991px) {
   .solutionsSection {
     padding: 50px 0;
+    background: radial-gradient(circle at center, #141c36 0%, #070912 100%), #070912 !important;
   }
 }
 @media (max-width: 576px) {
@@ -353,7 +381,7 @@ li {
 }
 .solutionsSection .solutionsCard {
   position: relative;
-  min-height: 100%;
+  height: 100%;
   padding: 32px 28px;
   border-radius: 12px;
   background: rgba(149, 174, 229, 0.48);
@@ -378,11 +406,6 @@ li {
 .solutionsSection .solutionsCard p {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
-}
-@media (max-width: 768px) {
-  .solutionsSection .solutionsCard {
-    min-height: auto;
-  }
 }
 
 .solutionCta {
@@ -519,6 +542,16 @@ li {
   padding: 32px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 991px) {
+  .servicesSection .aiSolutionItem .col-md-5 {
+    display: none !important;
+  }
+  .servicesSection .aiSolutionItem .col-md-7 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
 @media (max-width: 767px) {
   .servicesSection .aiSolutionItem {
     row-gap: 24px;
@@ -639,12 +672,29 @@ li {
 }
 @media (max-width: 991px) {
   .industrySection .industryCard {
-    border-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 @media (max-width: 767px) {
   .industrySection .industryCard {
     padding: 40px 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .industrySection .industryCardWrapper .row > div:nth-child(odd) .industryCard {
+    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+  .industrySection .industryCardWrapper .row > div:nth-child(5) .industryCard, .industrySection .industryCardWrapper .row > div:nth-child(6) .industryCard {
+    border-bottom: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .industrySection .industryCardWrapper .row > div .industryCard {
+    border-right: none !important;
+  }
+  .industrySection .industryCardWrapper .row > div:last-child .industryCard {
+    border-bottom: none !important;
   }
 }
 .industrySection .industryNumber {
@@ -712,6 +762,12 @@ li {
   padding: 20px 60px;
   border-radius: 15px;
   background: fixed url("../images/future-bg.webp") center center/cover no-repeat;
+}
+@media (max-width: 991px) {
+  .aiSolutionSection .futureCta .ctaWrapper {
+    background-attachment: scroll !important;
+    padding: 35px 24px !important;
+  }
 }
 .aiSolutionSection .futureCta .ctaImageWrapper {
   text-align: center;
@@ -1052,10 +1108,9 @@ li {
 }
 @media (max-width: 767px) {
   .aiHeroSection .techStackItem {
-    width: 100%;
-    justify-content: center;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 12px;
+    padding: 6px 12px;
   }
 }
 .aiHeroSection .avatar {
