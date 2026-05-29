@@ -1066,23 +1066,6 @@ li {
     display: none;
   }
 }
-.aiHeroSection .avatar .chatBubble {
-  animation: floatBubble 6s ease-in-out infinite;
-}
-.aiHeroSection .avatar .chatBubble.bubbleBlue {
-  animation-delay: 0s;
-}
-.aiHeroSection .avatar .chatBubble.bubbleWhite {
-  animation-delay: 3s;
-}
-@keyframes floatBubble {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
 @media (max-width: 1200px) {
   .aiHeroSection .robotCol {
     display: none;

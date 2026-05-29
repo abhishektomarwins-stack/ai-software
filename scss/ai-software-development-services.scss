@@ -1118,30 +1118,6 @@
         @media (max-width: 1200px) {
             display: none;
         }
-
-        .chatBubble {
-            animation: floatBubble 6s ease-in-out infinite;
-
-            &.bubbleBlue {
-                animation-delay: 0s;
-            }
-
-            &.bubbleWhite {
-                animation-delay: 3s;
-            }
-        }
-    }
-
-    @keyframes floatBubble {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-8px);
-        }
     }
 
     .robotCol {
@@ -1306,154 +1282,153 @@
 }
 
 .startYourDream {
-  background:
-    linear-gradient(180deg, rgba(32, 41, 44, 0) 0%, #000000 100%),
-    url(../images/ai/start-your-dream.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 173px 0;
- 
-  @media (max-width: 991px) {
-    padding: 100px 0;
-  }
- 
-  @media (max-width: 767px) {
-    padding: 60px 0;
-  }
- 
-  @media (max-width: 576px) {
-    padding: 45px 0 10px;
-  }
- 
-  h2 {
-    font-size: 100px;
-    line-height: 1;
-    margin: auto;
-    max-width: 840px;
-    text-align: center;
-    background: radial-gradient(
-      100.97% 265.86% at 110.31% -37.64%,
-      #fab8ff 0%,
-      #ffffff 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
- 
+    background:
+        linear-gradient(180deg, rgba(32, 41, 44, 0) 0%, #000000 100%),
+        url(../images/ai/start-your-dream.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 173px 0;
+
     @media (max-width: 991px) {
-      font-size: $font-size-60;
+        padding: 100px 0;
     }
- 
+
     @media (max-width: 767px) {
-      font-size: $font-size-40 !important;
-      line-height: 1.2 !important;
+        padding: 60px 0;
     }
-  }
-}
- 
-.developmentPartner {
-  padding: 90px 0;
-  background-color: #000000;
- 
-  @media (max-width: 767px) {
-    padding: 45px 0;
-  }
- 
-  .heading {
-    h2,
-    p {
-      color: $color-white;
+
+    @media (max-width: 576px) {
+        padding: 45px 0 10px;
     }
-  }
- 
-  .developmentFirmCarousel {
-    padding-top: 110px;
- 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      position: relative;
- 
-      .developmentList {
-        background: #222222;
-        padding: 40px 40px 0px;
-        border-radius: 18px;
-        margin-bottom: 20px;
-        cursor: pointer;
-        transition: all 0.5s;
-        position: sticky;
-        z-index: 1;
-        display: flex;
-        align-items: start;
-        gap: 15px;
- 
-        &:nth-child(1) {
-          top: 116px;
-          z-index: 1;
+
+    h2 {
+        font-size: 100px;
+        line-height: 1;
+        margin: auto;
+        max-width: 840px;
+        text-align: center;
+        background: radial-gradient(100.97% 265.86% at 110.31% -37.64%,
+                #fab8ff 0%,
+                #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-60;
         }
- 
-        &:nth-child(2) {
-          top: 132px;
-          z-index: 2;
-        }
- 
-        &:nth-child(3) {
-          top: 148px;
-          z-index: 3;
-        }
- 
-        &:nth-child(4) {
-          top: 164px;
-          z-index: 4;
-        }
- 
-        &:nth-child(5) {
-          top: 180px;
-          z-index: 5;
-        }
- 
-        &:nth-child(6) {
-          top: 196px;
-          z-index: 6;
-        }
- 
-        &:last-child {
-          margin: 0;
-        }
- 
+
         @media (max-width: 767px) {
-          flex-direction: column;
-          position: static;
-          padding: 20px 25px;
+            font-size: $font-size-40 !important;
+            line-height: 1.2 !important;
         }
- 
-        .developmentContent {
-          max-width: 540px;
- 
-          @media (max-width: 991px) {
-            max-width: 340px;
-          }
- 
-          @media (max-width: 767px) {
-            max-width: 100%;
-          }
- 
-          h3 {
-            font-family: $font-weight-bold;
-            color: $color-white;
-            margin-bottom: 11px;
- 
-            @media (max-width: 575px) {
-              font-size: $font-size-18;
-            }
-          }
- 
-          P {
-            color: $color-white;
-          }
-        }
-      }
     }
-  }
+}
+
+.developmentPartner {
+    padding: 90px 0;
+    background-color: #000000;
+
+    @media (max-width: 767px) {
+        padding: 45px 0;
+    }
+
+    .heading {
+
+        h2,
+        p {
+            color: $color-white;
+        }
+    }
+
+    .developmentFirmCarousel {
+        padding-top: 110px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+
+            .developmentList {
+                background: #222222;
+                padding: 40px 40px 0px;
+                border-radius: 18px;
+                margin-bottom: 20px;
+                cursor: pointer;
+                transition: all 0.5s;
+                position: sticky;
+                z-index: 1;
+                display: flex;
+                align-items: start;
+                gap: 15px;
+
+                &:nth-child(1) {
+                    top: 116px;
+                    z-index: 1;
+                }
+
+                &:nth-child(2) {
+                    top: 132px;
+                    z-index: 2;
+                }
+
+                &:nth-child(3) {
+                    top: 148px;
+                    z-index: 3;
+                }
+
+                &:nth-child(4) {
+                    top: 164px;
+                    z-index: 4;
+                }
+
+                &:nth-child(5) {
+                    top: 180px;
+                    z-index: 5;
+                }
+
+                &:nth-child(6) {
+                    top: 196px;
+                    z-index: 6;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    position: static;
+                    padding: 20px 25px;
+                }
+
+                .developmentContent {
+                    max-width: 540px;
+
+                    @media (max-width: 991px) {
+                        max-width: 340px;
+                    }
+
+                    @media (max-width: 767px) {
+                        max-width: 100%;
+                    }
+
+                    h3 {
+                        font-family: $font-weight-bold;
+                        color: $color-white;
+                        margin-bottom: 11px;
+
+                        @media (max-width: 575px) {
+                            font-size: $font-size-18;
+                        }
+                    }
+
+                    P {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
 }
