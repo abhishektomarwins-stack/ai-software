@@ -242,10 +242,6 @@
     }
 
     .whoCta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
         gap: 18px;
         margin-top: 40px;
         padding: 15px 20px;
@@ -260,15 +256,11 @@
     }
 
     .whoCtaBtn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        padding: 14px 28px;
+        padding: 10px 10px;
         border-radius: 12px;
         background: #0f9bff;
-        color: #ffffff;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        gap: 10px;
 
         &:hover {
             transform: translateY(-2px);
@@ -358,6 +350,10 @@
             font-size: $font-size-12;
         }
     }
+}
+
+.marqueeWrapper {
+    background: #d9f08a;
 }
 
 .marqueeContent {
@@ -461,7 +457,6 @@
         }
 
         p {
-            margin: 0;
             color: rgba($color-white, 0.88);
         }
     }
@@ -610,8 +605,6 @@
     }
 
     .aiSolutionTop {
-        display: flex;
-        align-items: center;
         gap: 18px;
         margin-bottom: 18px;
 
@@ -869,7 +862,7 @@
             height: 100%;
             padding: 38px 28px;
             border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
+            border-radius: 15px;
             backdrop-filter: blur(20px);
 
             &:hover {
@@ -928,9 +921,6 @@
     overflow: hidden;
 
     .roadmapImage {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding-right: 20px;
 
         img {
@@ -938,11 +928,7 @@
             max-width: 360px;
             height: auto;
             border-radius: 24px;
-            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-            &:hover {
-                transform: translateY(-8px);
-            }
         }
 
         @media (max-width: 1199px) {
@@ -1225,8 +1211,6 @@
         .heroButton {
             font-size: 18px;
             font-weight: 600;
-            color: #ffffff;
-            border: 0;
             background: linear-gradient(90deg, #1b7cff 0%, #2ec5ff 100%);
         }
 
@@ -1445,16 +1429,6 @@
                     z-index: 4;
                 }
 
-                &:nth-child(5) {
-                    top: 180px;
-                    z-index: 5;
-                }
-
-                &:nth-child(6) {
-                    top: 196px;
-                    z-index: 6;
-                }
-
                 &:last-child {
                     margin: 0;
                 }
@@ -1477,7 +1451,7 @@
                     }
 
                     h3 {
-                        font-family: $font-weight-bold;
+                        font-weight: $font-weight-bold;
                         color: $color-white;
                         margin-bottom: 11px;
 
@@ -1486,7 +1460,7 @@
                         }
                     }
 
-                    P {
+                    p {
                         color: $color-white;
                     }
                 }

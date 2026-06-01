@@ -252,10 +252,6 @@ li {
   text-align: left;
 }
 .whoSection .whoCta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 18px;
   margin-top: 40px;
   padding: 15px 20px;
@@ -268,15 +264,11 @@ li {
   font-size: 28px;
 }
 .whoSection .whoCtaBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 14px 28px;
+  padding: 10px 10px;
   border-radius: 12px;
   background: #0f9bff;
-  color: #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 10px;
 }
 .whoSection .whoCtaBtn:hover {
   transform: translateY(-2px);
@@ -351,6 +343,10 @@ li {
     width: 100%;
     font-size: 12px;
   }
+}
+
+.marqueeWrapper {
+  background: #d9f08a;
 }
 
 .marqueeContent {
@@ -447,7 +443,6 @@ li {
   border-top: 2px solid #ffffff;
 }
 .solutionsSection .solutionsCard p {
-  margin: 0;
   color: rgba(255, 255, 255, 0.88);
 }
 @media (max-width: 991px) {
@@ -598,8 +593,6 @@ li {
   }
 }
 .servicesSection .aiSolutionTop {
-  display: flex;
-  align-items: center;
   gap: 18px;
   margin-bottom: 18px;
 }
@@ -854,7 +847,7 @@ li {
   height: 100%;
   padding: 38px 28px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
+  border-radius: 15px;
   backdrop-filter: blur(20px);
 }
 .aiSolutionSection .enterpriseSolution .solutionCard:hover {
@@ -907,9 +900,6 @@ li {
   overflow: hidden;
 }
 .roadmapSection .roadmapImage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding-right: 20px;
 }
 .roadmapSection .roadmapImage img {
@@ -917,10 +907,6 @@ li {
   max-width: 360px;
   height: auto;
   border-radius: 24px;
-  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.roadmapSection .roadmapImage img:hover {
-  transform: translateY(-8px);
 }
 @media (max-width: 1199px) {
   .roadmapSection .roadmapImage {
@@ -1159,8 +1145,6 @@ li {
 .aiHeroSection .heroContent .heroButton {
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
-  border: 0;
   background: linear-gradient(90deg, #1b7cff 0%, #2ec5ff 100%);
 }
 @media (max-width: 767px) {
@@ -1360,14 +1344,6 @@ li {
   top: 164px;
   z-index: 4;
 }
-.developmentPartner .developmentFirmCarousel ul .developmentList:nth-child(5) {
-  top: 180px;
-  z-index: 5;
-}
-.developmentPartner .developmentFirmCarousel ul .developmentList:nth-child(6) {
-  top: 196px;
-  z-index: 6;
-}
 .developmentPartner .developmentFirmCarousel ul .developmentList:last-child {
   margin: 0;
 }
@@ -1392,7 +1368,7 @@ li {
   }
 }
 .developmentPartner .developmentFirmCarousel ul .developmentList .developmentContent h3 {
-  font-family: 700;
+  font-weight: 700;
   color: #ffffff;
   margin-bottom: 11px;
 }
@@ -1401,7 +1377,7 @@ li {
     font-size: 18px;
   }
 }
-.developmentPartner .developmentFirmCarousel ul .developmentList .developmentContent P {
+.developmentPartner .developmentFirmCarousel ul .developmentList .developmentContent p {
   color: #ffffff;
 }
 

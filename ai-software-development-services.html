@@ -25,7 +25,7 @@
 
         <a href="/" class="siteLogo d-flex align-items-center"
           aria-label="DITS home">
-          <img src="assets/images/logo.webp" alt="DITS" />
+          <img src="assets/images/logo.webp" alt="DITS" title="DITS" />
         </a>
 
         <input
@@ -71,7 +71,7 @@
         class="heroOverlay position-absolute top-0 start-0 w-100 h-100"></div>
 
       <div class="container position-relative">
-        <div class="row align-items-center heroRow">
+        <div class="row align-items-center">
 
           <div class="col-lg-6 col-12 heroLeft">
             <h1 class="fw-semibold text-white">
@@ -96,7 +96,7 @@
           <div class="col-lg-6 col-12 heroRight d-flex justify-content-center">
             <img
               src="assets/images/banner-image.webp"
-              alt="AI Robotic Hand"
+              alt="AI Robotic Hand" title="AI Robotic Hand"
               class="img-fluid heroImg" />
           </div>
 
@@ -126,7 +126,7 @@
                 class="whoStatIcon d-flex mb-2">
                 <img
                   src="assets/images/svg/experience.svg"
-                  alt="Years of Experience" />
+                  alt="Years of Experience" title="Years of Experience" />
               </div>
 
               <div class="whoStatNumber fw-bold">150+</div>
@@ -142,7 +142,7 @@
                 class="whoStatIcon d-flex mb-2">
                 <img
                   src="assets/images/svg/project.svg"
-                  alt="Projects Delivered" />
+                  alt="Projects Delivered" title="Projects Delivered" />
               </div>
 
               <div class="whoStatNumber fw-bold">1000+</div>
@@ -158,7 +158,7 @@
                 class="whoStatIcon d-flex mb-2">
                 <img
                   src="assets/images/svg/deployment.svg"
-                  alt="Deployment Success Rates" />
+                  alt="Deployment Success Rates" title="Deployment Success Rates" />
               </div>
 
               <div class="whoStatNumber fw-bold">96%</div>
@@ -174,7 +174,7 @@
                 class="whoStatIcon d-flex mb-2">
                 <img
                   src="assets/images/svg/clients.svg"
-                  alt="Happy Clients" />
+                  alt="Happy Clients" title="Happy Clients" />
               </div>
 
               <div class="whoStatNumber fw-bold">500+</div>
@@ -187,10 +187,10 @@
           <div class="col-lg col-md-4 col-sm-6 col-12">
             <div class="whoStat d-flex flex-column h-100 border-0">
               <div
-                      class="whoStatIcon d-flex mb-2">
-                      <img
+                class="whoStatIcon d-flex mb-2">
+                <img
                   src="assets/images/svg/reduction.svg"
-                  alt="Reduction in Operational Overhead" />
+                  alt="Reduction in Operational Overhead" title="Reduction in Operational Overhead" />
               </div>
 
               <div class="whoStatNumber fw-bold">60%</div>
@@ -202,13 +202,14 @@
 
         </div>
 
-        <div class="whoCta">
+        <div
+          class="whoCta d-flex align-items-center justify-content-between flex-wrap">
           <h3 class="whoCtaHeading fw-semibold text-white">
             Hire A Partner Not Just Engineers
           </h3>
 
           <a href="/contact-us"
-            class="whoCtaBtn fw-semibold text-white d-inline-block">
+            class="whoCtaBtn d-inline-flex align-items-center justify-content-center fw-semibold text-white text-decoration-none">
             Hire A Partner Not Just Engineers
             <i class="fas fa-arrow-right"></i>
           </a>
@@ -217,10 +218,8 @@
       </div>
     </section>
 
-    <section class="marqueeWrapper position-relative overflow-hidden py-3"
-      style="background:#d9f08a;">
-      <div class="marquee d-flex align-items-center"
-        style="white-space:nowrap;">
+    <section class="marqueeWrapper position-relative overflow-hidden py-3">
+      <div class="marquee d-flex align-items-center text-nowrap">
         <div class="marqueeContent">
           <span>Rapid Healthcare Software Development <img class="img-fluid"
               loading="lazy" src="assets/images/svg/slider-star.svg"
@@ -278,7 +277,7 @@
             <article class="solutionsCard">
               <h3>Process Automation</h3>
               <hr />
-              <p>
+              <p class="mb-0">
                 All the redundant tasks from data entry, document management,
                 report management and customer queries are automated without
                 manual intervention, increasing operational efficiency.
@@ -290,7 +289,7 @@
             <article class="solutionsCard">
               <h3>Better Decisions Making</h3>
               <hr />
-              <p>
+              <p class="mb-0">
                 AI processes large amounts of data, AI uncovers patterns,
                 trends, risks and opportunities, helping businesses make quick
                 decisions in a more ready state of mind.
@@ -302,7 +301,7 @@
             <article class="solutionsCard">
               <h3>Personalized Customers Experience</h3>
               <hr />
-              <p>
+              <p class="mb-0">
                 Predictive analytics solutions help enterprises to learn more
                 about their customers' behaviors and preferences helping them
                 anticipate customer needs and provide personalized
@@ -315,7 +314,7 @@
             <article class="solutionsCard">
               <h3>Minimized Operational Costs</h3>
               <hr />
-              <p>
+              <p class="mb-0">
                 Automated operations, proactive approach, accelerated decision
                 making, conversational AI chatbots eliminates costly downtime,
                 and reduces the operational costs.
@@ -327,7 +326,7 @@
             <article class="solutionsCard">
               <h3>Improve Forecasting and Planning</h3>
               <hr />
-              <p>
+              <p class="mb-0">
                 Using historical and current data, AI predicts demand,
                 changes in markets and customers' behavior, possible risks
                 helping organizations get better at forecasting and planning.
@@ -339,7 +338,7 @@
             <article class="solutionsCard">
               <h3>Next-Gen Digital Products</h3>
               <hr />
-              <p>
+              <p class="mb-0">
                 Businesses are able to build smarter digital products capable of
                 learning, evolving, improving and responding to users' demands
                 with AI powered chatbots and recommendation engines.
@@ -387,7 +386,7 @@
               class="img-fluid rightImg"
               loading="lazy"
               src="assets/images/custom-ai-software.webp"
-              alt="Custom AI Software" />
+              alt="Custom AI Software" title="Custom AI Software" />
 
           </div>
         </div>
@@ -414,14 +413,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/custom-ai.webp"
-              alt="Custom AI"
+              alt="Custom AI" title="Custom AI"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Custom</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -444,14 +443,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/generative-ai.webp"
-              alt="Generative AI"
+              alt="Generative AI" title="Generative AI"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Generative</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -476,14 +475,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/smart-ai.webp"
-              alt="Smart AI"
+              alt="Smart AI" title="Smart AI"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Smart</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -507,14 +506,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/ai-integration.webp"
-              alt="AI Integration"
+              alt="AI Integration" title="AI Integration"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Integration</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -537,14 +536,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/ai-strategy.webp"
-              alt="AI Strategy"
+              alt="AI Strategy" title="AI Strategy"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Strategy</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -567,14 +566,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/ai-copilot.webp"
-              alt="AI Copilot"
+              alt="AI Copilot" title="AI Copilot"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Copilot</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -597,14 +596,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/ai-agent.webp"
-              alt="AI Agent"
+              alt="AI Agent" title="AI Agent"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Agent</span>
 
                 <h3 class="aiSolutionHeading mb-0">
@@ -629,14 +628,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/ai-cybersecurity.webp"
-              alt="AI Cybersecurity"
+              alt="AI Cybersecurity" title="AI Cybersecurity"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">Security</span>
               </div>
 
@@ -656,14 +655,14 @@
           <div class="col-lg-4 col-md-5">
             <img
               src="assets/images/aiops.webp"
-              alt="AIOps"
+              alt="AIOps" title="AIOps"
               class="aiSolutionImage img-fluid">
           </div>
 
           <div class="col-lg-8 col-md-7">
             <div class="aiSolutionContent">
 
-              <div class="aiSolutionTop">
+              <div class="aiSolutionTop d-flex align-items-center">
                 <span class="aiSolutionTag">AIOps</span>
               </div>
 
@@ -710,7 +709,7 @@
           <div class="row g-0">
 
             <div class="col-lg-4 col-md-6">
-              <div class="industryCard blurCard">
+              <div class="industryCard">
                 <span class="industryNumber">01</span>
 
                 <h3 class="industryCardTitle">
@@ -758,7 +757,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6">
-              <div class="industryCard blurCard">
+              <div class="industryCard">
                 <span class="industryNumber">04</span>
 
                 <h3 class="industryCardTitle">
@@ -819,13 +818,11 @@
 
             <div class="row align-items-center gy-4">
 
-              <div class="col-lg-5">
-                <div class="ctaImageWrapper">
-                  <img
-                    src="assets/images/future-img.webp"
-                    alt="AI Development"
-                    class="img-fluid ctaImage">
-                </div>
+              <div class="col-lg-5 text-center d-none d-lg-block">
+                <img
+                  src="assets/images/future-img.webp"
+                  alt="AI Development" title="AI Development"
+                  class="img-fluid">
               </div>
 
               <div class="col-lg-7">
@@ -864,23 +861,19 @@
             <div class="row align-items-start gy-4">
 
               <div class="col-lg-6">
-                <div class="solutionTitleWrapper">
-                  <h2 class="solutionTitle">
-                    Our Top AI Software Development Solutions for Modern
-                    Enterprises
-                  </h2>
-                </div>
+                <h2 class="solutionTitle">
+                  Our Top AI Software Development Solutions for Modern
+                  Enterprises
+                </h2>
               </div>
 
               <div class="col-lg-5 offset-lg-1">
-                <div class="solutionDescriptionWrapper">
-                  <p class="solutionDescription">
-                    Witness unparalleled business growth with our enterprise AI
-                    solutions ensuring scalable growth, solving practical
-                    challenges
-                    and attaining measurable outcomes.
-                  </p>
-                </div>
+                <p class="solutionDescription">
+                  Witness unparalleled business growth with our enterprise AI
+                  solutions ensuring scalable growth, solving practical
+                  challenges
+                  and attaining measurable outcomes.
+                </p>
               </div>
 
             </div>
@@ -895,7 +888,7 @@
                   <div class="solutionIcon">
                     <img
                       src="assets/images/svg/business-automation.svg"
-                      alt="Business Automation">
+                      alt="Business Automation" title="Business Automation">
                   </div>
 
                   <h3 class="solutionCardTitle">
@@ -919,7 +912,7 @@
                   <div class="solutionIcon">
                     <img
                       src="assets/images/svg/predictive-analytics.svg"
-                      alt="Predictive Analytics">
+                      alt="Predictive Analytics" title="Predictive Analytics">
                   </div>
 
                   <h3 class="solutionCardTitle">
@@ -942,7 +935,7 @@
                   <div class="solutionIcon">
                     <img
                       src="assets/images/svg/crm-erp.svg"
-                      alt="CRM and ERP">
+                      alt="CRM and ERP" title="CRM and ERP">
                   </div>
 
                   <h3 class="solutionCardTitle">
@@ -966,7 +959,7 @@
                   <div class="solutionIcon">
                     <img
                       src="assets/images/svg/fraud-detection.svg"
-                      alt="Fraud Detection">
+                      alt="Fraud Detection" title="Fraud Detection">
                   </div>
 
                   <h3 class="solutionCardTitle">
@@ -988,7 +981,7 @@
                   <div class="solutionIcon">
                     <img
                       src="assets/images/svg/customer-support.svg"
-                      alt="Customer Support Automation">
+                      alt="Customer Support Automation" title="Customer Support Automation">
                   </div>
 
                   <h3 class="solutionCardTitle">
@@ -1010,7 +1003,7 @@
                   <div class="solutionIcon">
                     <img
                       src="assets/images/svg/genai-knowledge-assistants.svg"
-                      alt="GenAI Knowledge Assistants">
+                      alt="GenAI Knowledge Assistants" title="GenAI Knowledge Assistants">
                   </div>
 
                   <h3 class="solutionCardTitle">
@@ -1039,9 +1032,10 @@
       <div class="container">
         <div class="row align-items-center">
 
-          <div class="col-lg-4 roadmapImage">
+          <div
+            class="col-lg-4 roadmapImage d-flex align-items-center justify-content-center">
             <img src="assets/images/roadmap-process.webp"
-              alt="AI Cybernetic Face Graphic" />
+              alt="AI Cybernetic Face Graphic" title="AI Cybernetic Face Graphic" />
           </div>
 
           <div class="col-lg-8">
@@ -1216,11 +1210,8 @@
 
           <div
             class="col-lg-5 robotCol position-relative d-flex justify-content-center justify-content-lg-start">
-            <div class="avatar position-relative">
-              <img src="assets/images/ai-chatbot-avatar.webp"
-                alt="AI Robot Chatbot Avatar" class="img-fluid" />
-
-            </div>
+            <img src="assets/images/ai-chatbot-avatar.webp"
+              alt="AI Robot Chatbot Avatar" title="AI Robot Chatbot Avatar" class="img-fluid" />
           </div>
 
           <div class="col-lg-7 contentCol">
@@ -1241,10 +1232,8 @@
         </div>
       </section>
 
-      <section class="marqueeWrapper position-relative overflow-hidden py-3"
-        style="background:#d9f08a;">
-        <div class="marquee d-flex align-items-center"
-          style="white-space:nowrap;">
+      <section class="marqueeWrapper position-relative overflow-hidden py-3">
+        <div class="marquee d-flex align-items-center text-nowrap">
           <div class="marqueeContent">
             <span>Rapid Healthcare Software Development <img class="img-fluid"
                 loading="lazy" src="assets/images/svg/slider-star.svg"
@@ -1423,16 +1412,14 @@
       <section class="developmentPartner">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 col-12">
-              <div class="heading">
-                <h2 class="pb-2">Pick DITS as Your trustworthy AI Software
-                  Development Company! </h2>
-                <p>DITS is a trusted AI software development services company
-                  delivering scalable, secure, and
-                  high-performance AI solutions. We specialize in custom AI ML
-                  software development services tailored to
-                  meet unique business needs across industries.</p>
-              </div>
+            <div class="col-lg-8 col-12 text-white">
+              <h2 class="pb-2">Pick DITS as Your trustworthy AI Software
+                Development Company! </h2>
+              <p>DITS is a trusted AI software development services company
+                delivering scalable, secure, and
+                high-performance AI solutions. We specialize in custom AI ML
+                software development services tailored to
+                meet unique business needs across industries.</p>
             </div>
             <div class="col-12">
               <div class="developmentFirmCarousel">
