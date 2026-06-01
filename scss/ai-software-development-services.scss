@@ -135,22 +135,6 @@
         margin-bottom: 32px;
     }
 
-    .heroBtn {
-        background: $color-primary-bg;
-        font-size: $font-size-16;
-        padding: 14px 32px;
-        border-radius: 15px;
-        text-decoration: none;
-        box-shadow: 0 0 30px rgba(5, 159, 255, 0.35);
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-        @media (max-width: 991px) {
-            display: block;
-            max-width: 320px;
-            margin: 0 auto;
-            text-align: center;
-        }
-    }
 
     .heroRight {
         flex: 1 1 420px;
@@ -197,10 +181,7 @@
             padding: 0 10px;
         }
 
-        .heroBtn {
-            font-size: $font-size-13;
-            padding: 11px 16px;
-        }
+
     }
 }
 
@@ -255,18 +236,7 @@
         font-size: $font-size-28;
     }
 
-    .whoCtaBtn {
-        padding: 10px 10px;
-        border-radius: 12px;
-        background: #0f9bff;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        gap: 10px;
 
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 16px 30px rgba(15, 155, 255, 0.25);
-        }
-    }
 
     @media (max-width: 991px) {
         padding: 60px 0;
@@ -294,13 +264,7 @@
             font-size: $font-size-24;
         }
 
-        .whoCtaBtn {
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: $font-size-14;
-        }
+
     }
 
     @media (max-width: 576px) {
@@ -345,33 +309,7 @@
             font-size: $font-size-20;
         }
 
-        .whoCtaBtn {
-            width: 100%;
-            font-size: $font-size-12;
-        }
-    }
-}
 
-.marqueeWrapper {
-    background: #d9f08a;
-}
-
-.marqueeContent {
-    display: inline-block;
-    animation: marqueeAnimation 20s linear infinite;
-
-    span {
-        margin-right: 60px;
-        font-size: $font-size-18;
-        color: #1b1b1b;
-
-        img {
-            padding-left: 12px;
-        }
-
-        &.tag {
-            margin-right: 200px;
-        }
     }
 }
 
@@ -507,25 +445,7 @@
             }
         }
 
-        .heroBtn {
-            padding: 14px 32px;
-            border-radius: 15px;
-            background: $color-primary-bg;
-            font-size: $font-size-16;
-            text-decoration: none;
 
-            @media (max-width: 991px) {
-                display: block;
-                max-width: 320px;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            @media (max-width: 576px) {
-                padding: 11px 16px;
-                font-size: $font-size-13;
-            }
-        }
 
         @media (max-width: 991px) {
             max-width: 100%;
@@ -793,20 +713,7 @@
                 }
             }
 
-            .heroBtn {
-                padding: 15px 34px;
-                border-radius: 16px;
-                background: linear-gradient(90deg, #0f8cff 0%, #139df4 100%);
-                color: $color-white;
-                font-size: $font-size-18;
-                text-decoration: none;
-                font-weight: $font-weight-semibold;
 
-                @media (max-width: 576px) {
-                    padding: 12px 24px;
-                    font-size: $font-size-15;
-                }
-            }
 
             @media (max-width: 991px) {
                 max-width: 100%;
@@ -1208,21 +1115,7 @@
             }
         }
 
-        .heroButton {
-            font-size: 18px;
-            font-weight: 600;
-            background: linear-gradient(90deg, #1b7cff 0%, #2ec5ff 100%);
-        }
 
-        @media (max-width: 767px) {
-            width: 100%;
-            font-size: $font-size-16;
-            padding: 12px 20px;
-        }
-
-        @media (max-width: 575px) {
-            width: fit-content;
-        }
     }
 }
 
@@ -1304,22 +1197,7 @@
                 }
             }
 
-            .heroBtn {
-                background: $color-primary-bg;
-                font-size: $font-size-16;
-                padding: 10px 15px;
-                border-radius: 15px;
-                box-shadow: 0 0 30px rgba(5, 159, 255, 0.35);
-                transition: box-shadow 0.3s ease, transform 0.3s ease;
-                align-self: flex-start;
 
-                @media (max-width: 991px) {
-                    display: block;
-                    max-width: 320px;
-                    margin: 0;
-                    text-align: center;
-                }
-            }
 
         }
     }

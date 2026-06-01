@@ -45,3 +45,81 @@ p,
 li {
   font-size: $paragraph-font-size;
 }
+
+// COMMON BUTTON STYLE
+.common-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: $color-primary-bg;
+  color: $color-white !important;
+  font-size: $font-size-16;
+  font-weight: $font-weight-semibold;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(5, 159, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(5, 159, 255, 0.45);
+    background: #1fa7ff;
+
+    i {
+      transform: translateX(4px);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(5, 159, 255, 0.25);
+  }
+
+  @media (max-width: 991px) {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: $font-size-14;
+    padding: 12px 24px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: $font-size-13;
+    padding: 11px 20px;
+    border-radius: 10px;
+  }
+}
+
+// marque
+.marqueeWrapper {
+  background: #d9f08a;
+
+  .marqueeContent {
+    display: inline-block;
+    animation: marqueeAnimation 20s linear infinite;
+
+    span {
+      margin-right: 60px;
+      font-size: $font-size-18;
+      color: #1b1b1b;
+
+      img {
+        padding-left: 12px;
+      }
+
+      &.tag {
+        margin-right: 200px;
+      }
+    }
+  }
+}

@@ -39,4 +39,55 @@ li {
   font-size: 16px;
 }
 
+.common-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #059FFF;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(5, 159, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+.common-btn i {
+  transition: transform 0.3s ease;
+}
+.common-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(5, 159, 255, 0.45);
+  background: #1fa7ff;
+}
+.common-btn:hover i {
+  transform: translateX(4px);
+}
+.common-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(5, 159, 255, 0.25);
+}
+@media (max-width: 991px) {
+  .common-btn {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 576px) {
+  .common-btn {
+    font-size: 13px;
+    padding: 11px 20px;
+    border-radius: 10px;
+  }
+}
+
 /*# sourceMappingURL=common.css.map */
