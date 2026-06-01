@@ -188,6 +188,14 @@
 .whoSection {
     background: url('../images/who-bg.webp') center/cover no-repeat;
 
+    @media (max-width: 991px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+    }
+
     .whoBadge {
         background: #ffffff;
         border-radius: 25px;
@@ -198,11 +206,25 @@
     .whoHeading {
         font-size: $font-size-40;
         margin-bottom: 50px;
+
+        @media (max-width: 576px) {
+            font-size: $font-size-22;
+            margin-bottom: 36px;
+
+            br {
+                display: none;
+            }
+        }
     }
 
     .whoStats {
         >div:nth-child(4) .whoStat {
             border-bottom: none !important;
+        }
+
+        @media (max-width: 576px) {
+            row-gap: 0 !important;
+            margin-bottom: 40px !important;
         }
     }
 
@@ -215,6 +237,20 @@
         border-right: 2px solid rgba(0, 0, 0, 0.08);
         border-bottom: none;
 
+        @media (max-width: 991px) {
+            align-items: center;
+            text-align: center !important;
+            padding: 24px 16px !important;
+            border-right: none !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+
+        }
+
+        @media (max-width: 576px) {
+            padding: 16px 12px !important;
+
+        }
     }
 
     .whoStatIcon {
@@ -226,6 +262,14 @@
             width: auto;
             object-fit: contain;
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+            @media (max-width: 991px) {
+                height: 42px;
+            }
+
+            @media (max-width: 576px) {
+                height: 36px !important;
+            }
         }
     }
 
@@ -237,6 +281,15 @@
         text-align: left;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (max-width: 991px) {
+            font-size: $font-size-36;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-28;
+        }
     }
 
     .whoStatLabel {
@@ -244,6 +297,15 @@
         font-size: $font-size-12;
         text-align: left;
         color: #444444;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-10;
+        }
     }
 
     .whoCta {
@@ -253,111 +315,30 @@
         background: #325C80;
         border-radius: 24px;
         box-shadow: 0 20px 50px rgba(8, 28, 80, 0.18);
-    }
 
-    .whoCtaHeading {
-        margin: 0;
-        font-size: $font-size-28;
-    }
-
-
-
-    @media (max-width: 991px) {
-        padding: 60px 0;
-
-        .whoStat {
-            align-items: center;
-            text-align: center !important;
-            padding: 24px 16px !important;
-            border-right: none !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-
-            &:hover {
-                transform: translateY(-5px);
-                background: rgba(255, 255, 255, 0.8);
-                box-shadow: 0 15px 30px rgba(57, 88, 189, 0.06);
-            }
-        }
-
-        .whoStatIcon {
-            img {
-                height: 42px;
-            }
-        }
-
-        .whoStatNumber {
-            font-size: $font-size-36;
-            text-align: center;
-        }
-
-        .whoStatLabel {
-            max-width: 100%;
-            text-align: center;
-        }
-
-        .whoCta {
+        @media (max-width: 991px) {
             flex-direction: column;
             gap: 20px !important;
             text-align: center;
             padding: 30px 24px !important;
         }
 
-        .whoCtaHeading {
+        @media (max-width: 576px) {
+            padding: 28px 20px !important;
+        }
+    }
+
+    .whoCtaHeading {
+        margin: 0;
+        font-size: $font-size-28;
+
+        @media (max-width: 991px) {
             font-size: $font-size-24;
         }
 
-
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-
-        .whoHeading {
-            font-size: $font-size-22;
-            margin-bottom: 36px;
-
-            br {
-                display: none;
-            }
-        }
-
-        .whoStats {
-            row-gap: 0 !important;
-            margin-bottom: 40px !important;
-        }
-
-        .whoStat {
-            padding: 16px 12px !important;
-
-            &:hover {
-                transform: translateY(-3px);
-            }
-        }
-
-        .whoStatIcon {
-            img {
-                height: 36px !important;
-            }
-        }
-
-        .whoStatNumber {
-            font-size: $font-size-28;
-        }
-
-        .whoStatLabel {
-            font-size: $font-size-10;
-        }
-
-        .whoCta {
-            padding: 28px 20px !important;
-        }
-
-        .whoCtaHeading {
+        @media (max-width: 576px) {
             font-size: $font-size-20;
         }
-
-
     }
 }
 
