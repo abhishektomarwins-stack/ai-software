@@ -472,15 +472,6 @@
             transform: translateY(-6px);
         }
 
-        @media (max-width: 767px) {
-            max-width: 280px;
-            margin: 0 auto 0 0;
-        }
-
-        @media (max-width: 576px) {
-            max-width: 240px;
-            margin: 0 auto 0 0;
-        }
     }
 
     .aiSolutionContent {
