@@ -2,6 +2,8 @@
 @use 'common';
 
 .siteHeader {
+    padding: 15px 40px;
+
     .siteNav {
         .siteLogo img {
             @media (max-width: 576px) {
@@ -27,16 +29,30 @@
         .siteMenu {
             display: flex;
             align-items: center;
+            gap: 32px;
 
-            a:hover {
-                color: $color-primary-bg;
+            a {
+                color: $color-white;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+
+                &:hover {
+                    color: $color-primary-bg;
+                }
             }
         }
 
         .siteContact {
+            padding: 10px 24px;
+            border: 2px solid $color-white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+
             &:hover {
                 background: $color-white;
                 color: $color-black !important;
+                border-color: $color-white;
             }
         }
 
@@ -48,12 +64,12 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: $color-black;
                 display: none;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0 !important;
                 padding: 16px 24px 24px;
+                background: $color-black;
 
                 a {
                     width: 100%;
@@ -97,12 +113,7 @@
     }
 
     .container {
-        position: relative;
         z-index: 2;
-    }
-
-    @media (max-width: 991px) {
-        background: radial-gradient(circle at 70% 30%, #1e264a 0%, #060810 100%), #060810 !important;
     }
 
     .heroLeft {
@@ -129,6 +140,7 @@
         font-size: $font-size-16;
         padding: 14px 32px;
         border-radius: 15px;
+        text-decoration: none;
         box-shadow: 0 0 30px rgba(5, 159, 255, 0.35);
         transition: box-shadow 0.3s ease, transform 0.3s ease;
 
@@ -163,9 +175,15 @@
         }
     }
 
+    @media (max-width: 991px) {
+        background:
+            radial-gradient(circle at 70% 30%, #1e264a 0%, #060810 100%),
+            #060810 !important;
+    }
+
     @media (max-width: 576px) {
-        padding: 50px 0;
         min-height: 100vh;
+        padding: 50px 0;
 
         h1 {
             font-size: $font-size-22;
@@ -189,40 +207,72 @@
 .whoSection {
     background: url('../images/who-bg.webp') center/cover no-repeat;
 
+    .whoBadge {
+        background: #ffffff;
+        border-radius: 25px;
+        padding: 10px 20px;
+        color: #3958BD;
+    }
+
     .whoHeading {
         font-size: $font-size-40;
         margin-bottom: 50px;
     }
 
     .whoStat {
-        &:last-child {
-            @media (max-width: 991px) {
-                border-bottom: none;
-            }
-        }
+        padding: 28px 24px;
+        border-right: 2px solid rgba(0, 0, 0, 0.14);
+        transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .whoStatNumber {
+        margin-bottom: 8px;
         font-size: $font-size-40;
         background: $hero-gradient-alt;
+        background-clip: text;
+        text-align: left;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 8px;
     }
 
     .whoStatLabel {
-        font-size: 11px;
         max-width: 130px;
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .whoCta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 40px;
+        padding: 15px 20px;
+        background: #325C80;
+        border-radius: 24px;
+        box-shadow: 0 20px 50px rgba(8, 28, 80, 0.18);
     }
 
     .whoCtaHeading {
+        margin: 0;
         font-size: $font-size-28;
     }
 
     .whoCtaBtn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 12px;
+        background: #0f9bff;
+        color: #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
         &:hover {
             transform: translateY(-2px);
+            box-shadow: 0 16px 30px rgba(15, 155, 255, 0.25);
         }
     }
 
@@ -230,11 +280,11 @@
         padding: 60px 0;
 
         .whoStat {
+            align-items: center;
+            text-align: center !important;
+            padding: 16px 12px !important;
             border-right: none !important;
             border-bottom: 1px solid #e0e0e0;
-            padding: 16px 12px !important;
-            text-align: center !important;
-            align-items: center;
         }
 
         .whoStatLabel {
@@ -243,9 +293,9 @@
 
         .whoCta {
             flex-direction: column;
+            gap: 20px !important;
             text-align: center;
             padding: 30px 24px !important;
-            gap: 20px !important;
         }
 
         .whoCtaHeading {
@@ -253,11 +303,11 @@
         }
 
         .whoCtaBtn {
-            font-size: $font-size-14;
             width: 100%;
             max-width: 350px;
             margin: 0 auto;
             text-align: center;
+            font-size: $font-size-14;
         }
     }
 
@@ -296,8 +346,6 @@
         }
 
         .whoCta {
-            flex-direction: column;
-            text-align: center;
             padding: 28px 20px !important;
         }
 
@@ -336,19 +384,23 @@
     overflow: hidden;
     padding: 90px 0;
 
-    @media (max-width: 991px) {
-        padding: 50px 0;
-        background: radial-gradient(circle at center, #141c36 0%, #070912 100%), #070912 !important;
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: rgba(0, 0, 0, 0.45);
     }
 
     .heroVideoBg {
+        z-index: 0;
         object-fit: cover;
         object-position: center;
-        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
     }
 
     .solutionsHeading {
@@ -368,14 +420,9 @@
     }
 
     .solutionsIntro {
-        max-width: 480px;
-        margin-left: auto;
-        font-size: $font-size-16;
-        color: rgba($color-white, 0.9);
+        text-align: left;
 
         @media (max-width: 991px) {
-            max-width: 100%;
-            margin-left: 0;
             text-align: center;
             font-size: $font-size-15;
         }
@@ -418,23 +465,26 @@
             color: rgba($color-white, 0.88);
         }
     }
+
+    @media (max-width: 991px) {
+        padding: 50px 0;
+        background:
+            radial-gradient(circle at center, #141c36 0%, #070912 100%),
+            #070912 !important;
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+    }
 }
 
 .solutionCta {
     margin-top: -60px;
 
-    @media (max-width: 991px) {
-        margin-top: -40px;
-    }
-
-    @media (max-width: 576px) {
-        margin-top: -20px;
-    }
-
     .ctaWrapper {
         padding: 44px 60px;
         border-radius: 18px;
-        background: url("../images/custom-bg.webp") center center / cover no-repeat;
+        background: url("../images/custom-bg.webp") center / cover no-repeat;
 
         @media (max-width: 720px) {
             padding: 30px 20px;
@@ -443,11 +493,6 @@
 
     .ctaContent {
         max-width: 470px;
-
-        @media (max-width: 991px) {
-            max-width: 100%;
-            text-align: center;
-        }
 
         h3 {
             color: #111;
@@ -472,6 +517,7 @@
             border-radius: 15px;
             background: $color-primary-bg;
             font-size: $font-size-16;
+            text-decoration: none;
 
             @media (max-width: 991px) {
                 display: block;
@@ -484,6 +530,11 @@
                 padding: 11px 16px;
                 font-size: $font-size-13;
             }
+        }
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+            text-align: center;
         }
     }
 
@@ -498,18 +549,18 @@
             display: none;
         }
     }
+
+    @media (max-width: 991px) {
+        margin-top: -40px;
+    }
+
+    @media (max-width: 576px) {
+        margin-top: -20px;
+    }
 }
 
 .servicesSection {
     padding: 50px 0;
-
-    @media (max-width: 991px) {
-        padding: 60px 0;
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
 
     .sectionHeadingWrap {
         max-width: 850px;
@@ -526,16 +577,13 @@
         font-size: $font-size-40;
         font-weight: $font-weight-bold;
 
-        @media (max-width: 991px) {
-            font-size: 42px;
-        }
-
         @media (max-width: 576px) {
             font-size: $font-size-30;
         }
     }
 
-    .sectionDescription {
+    .sectionDescription,
+    .aiSolutionDescription {
         color: $color-black;
         font-size: $font-size-16;
 
@@ -547,18 +595,6 @@
     .aiSolutionItem {
         padding: 32px 0;
         border-bottom: 1px solid rgba($color-black, 0.25);
-
-        @media (max-width: 991px) {
-            .col-md-5 {
-                display: none !important;
-            }
-
-            .col-md-7 {
-                width: 100% !important;
-                flex: 0 0 100% !important;
-                max-width: 100% !important;
-            }
-        }
 
         @media (max-width: 767px) {
             row-gap: 24px;
@@ -591,7 +627,6 @@
         border-radius: 5px;
         background: linear-gradient(90deg, #5D7CFF 0%, #C86EFF 100%);
         color: #ffffff;
-
     }
 
     .aiSolutionHeading {
@@ -608,27 +643,14 @@
         }
     }
 
-    .aiSolutionDescription {
-        color: $color-black;
-        font-size: $font-size-16;
-
-        @media (max-width: 576px) {
-            font-size: $font-size-15;
-        }
+    @media (max-width: 576px) {
+        padding: 40px 0;
     }
 }
 
 .industrySection {
     padding: 50px 0;
-    background: url("../images/ai-bg.webp") center center / cover no-repeat;
-
-    @media (max-width: 991px) {
-        padding: 60px 0;
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
+    background: url("../images/ai-bg.webp") center / cover no-repeat;
 
     .industryContent {
         margin-bottom: 60px;
@@ -641,11 +663,6 @@
     .industryTitle {
         color: $color-white;
         font-weight: $font-weight-bold;
-
-
-        @media (max-width: 991px) {
-            font-size: $font-size-28;
-        }
 
         @media (max-width: 576px) {
             font-size: $font-size-22;
@@ -666,54 +683,27 @@
         position: relative;
         z-index: 2;
         overflow: hidden;
-        border: 1px solid rgba($color-white, 0.12);
         border-radius: 24px;
+        border: 1px solid rgba($color-white, 0.12);
         backdrop-filter: blur(14px);
+
+        .row {
+            margin: 0;
+        }
     }
 
     .industryCard {
         position: relative;
         height: 100%;
         padding: 30px 25px;
-        border-right: 1px solid rgba($color-white, 0.2);
+        border-right: 1px solid rgba($color-white, 0.12);
+        border-bottom: 1px solid rgba($color-white, 0.12);
+        background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(14px);
-
-        @media (max-width: 991px) {
-            border-right: none;
-            border-bottom: 1px solid rgba($color-white, 0.2);
-        }
+        transition: transform 0.3s ease, background 0.3s ease;
 
         @media (max-width: 767px) {
             padding: 40px 24px;
-        }
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-        .industryCardWrapper {
-            .row>div {
-                &:nth-child(odd) .industryCard {
-                    border-right: 1px solid rgba($color-white, 0.2) !important;
-                }
-
-                &:nth-child(5) .industryCard,
-                &:nth-child(6) .industryCard {
-                    border-bottom: none !important;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 767px) {
-        .industryCardWrapper {
-            .row>div {
-                .industryCard {
-                    border-right: none !important;
-                }
-
-                &:last-child .industryCard {
-                    border-bottom: none !important;
-                }
-            }
         }
     }
 
@@ -753,36 +743,28 @@
             font-size: $font-size-14;
         }
     }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+    }
 }
 
 .aiSolutionSection {
     position: relative;
     padding: 50px 0;
-    background: url("../images/common-bg.webp") center center / cover no-repeat;
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
+    background: url("../images/common-bg.webp") center / cover no-repeat;
 
     .futureCta {
         padding-bottom: 80px;
 
-        @media (max-width: 767px) {
-            padding-bottom: 50px;
-        }
-
-        @media (max-width: 576px) {
-            padding-bottom: 36px;
-        }
-
         .ctaWrapper {
             padding: 20px 60px;
             border-radius: 15px;
-            background: fixed url("../images/future-bg.webp") center center / cover no-repeat;
+            background: fixed url("../images/future-bg.webp") center / cover no-repeat;
 
             @media (max-width: 991px) {
-                background-attachment: scroll !important;
                 padding: 35px 24px !important;
+                background-attachment: scroll !important;
             }
         }
 
@@ -797,11 +779,6 @@
         .ctaContent {
             max-width: 720px;
 
-            @media (max-width: 991px) {
-                max-width: 100%;
-                text-align: center;
-            }
-
             h3 {
                 margin-bottom: 20px;
                 color: $color-black;
@@ -811,7 +788,6 @@
                 @media (max-width: 767px) {
                     font-size: $font-size-28;
                 }
-
             }
 
             p {
@@ -827,11 +803,10 @@
             .heroBtn {
                 padding: 15px 34px;
                 border-radius: 16px;
-                background: linear-gradient(90deg,
-                        #0f8cff 0%,
-                        #139df4 100%);
+                background: linear-gradient(90deg, #0f8cff 0%, #139df4 100%);
                 color: $color-white;
                 font-size: $font-size-18;
+                text-decoration: none;
                 font-weight: $font-weight-semibold;
 
                 @media (max-width: 576px) {
@@ -839,7 +814,13 @@
                     font-size: $font-size-15;
                 }
             }
+
+            @media (max-width: 991px) {
+                max-width: 100%;
+                text-align: center;
+            }
         }
+
     }
 
     .enterpriseSolution {
@@ -879,8 +860,8 @@
         .solutionCardWrapper {
             position: relative;
             z-index: 2;
-            border-radius: 26px;
             overflow: hidden;
+            border-radius: 26px;
             backdrop-filter: blur(18px);
         }
 
@@ -890,11 +871,9 @@
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
             backdrop-filter: blur(20px);
-            transition: 0.3s ease;
 
             &:hover {
-                background-image: url("../images/solution-hover-bg.webp");
-                background-size: cover;
+                background: url("../images/solution-hover-bg.webp") center / cover no-repeat;
             }
 
             @media (max-width: 991px) {
@@ -932,6 +911,10 @@
             font-size: $font-size-15;
             font-weight: 400;
         }
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
     }
 }
 
@@ -1173,7 +1156,7 @@
 
     .techStackItem {
         background: $color-white;
-        border-radius: 18px;
+        border-radius: 10px;
         padding: 6px 16px;
         font-size: $font-size-16;
         font-weight: $font-weight-medium;
@@ -1338,22 +1321,20 @@
             }
 
             .heroBtn {
+                background: $color-primary-bg;
+                font-size: $font-size-16;
+                padding: 10px 15px;
+                border-radius: 15px;
+                box-shadow: 0 0 30px rgba(5, 159, 255, 0.35);
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
                 align-self: flex-start;
-                background: #059FFF;
-                color: #ffffff !important;
-                padding: 12px 28px;
-                border-radius: 12px;
-                text-align: center;
 
-                &:hover {
-                    box-shadow: 0 8px 25px rgba(5, 159, 255, 0.4);
-                    transform: translateY(-2px);
+                @media (max-width: 991px) {
+                    display: block;
+                    max-width: 320px;
+                    margin: 0;
+                    text-align: center;
                 }
-
-                @media (max-width: 576px) {
-                    max-width: 100%;
-                }
-
             }
 
         }
