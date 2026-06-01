@@ -735,14 +735,6 @@ li {
     background-attachment: scroll !important;
   }
 }
-.aiSolutionSection .futureCta .ctaImageWrapper {
-  text-align: center;
-}
-@media (max-width: 991px) {
-  .aiSolutionSection .futureCta .ctaImageWrapper {
-    display: none;
-  }
-}
 .aiSolutionSection .futureCta .ctaContent {
   max-width: 720px;
 }
@@ -898,12 +890,10 @@ li {
   max-width: 900px;
   line-height: 1.6;
 }
-.roadmapSection .owl-carousel.owl-theme.roadmapSlider.owl-loaded.owl-drag {
-  border-bottom: 5px solid #474CB5;
-}
 .roadmapSection .roadmapSlider {
   position: relative;
   padding-bottom: 5px;
+  border-bottom: 5px solid #474CB5;
 }
 .roadmapSection .roadmapSlider .owl-stage {
   display: flex;
@@ -1059,14 +1049,6 @@ li {
     font-size: 14px;
     border-radius: 12px;
     padding: 6px 12px;
-  }
-}
-.aiHeroSection .avatar {
-  position: relative;
-}
-@media (max-width: 1200px) {
-  .aiHeroSection .avatar {
-    display: none;
   }
 }
 @media (max-width: 1200px) {
@@ -1238,10 +1220,6 @@ li {
   .developmentPartner {
     padding: 45px 0;
   }
-}
-.developmentPartner .heading h2,
-.developmentPartner .heading p {
-  color: #ffffff;
 }
 .developmentPartner .developmentFirmCarousel {
   padding-top: 110px;

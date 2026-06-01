@@ -681,14 +681,6 @@
             }
         }
 
-        .ctaImageWrapper {
-            text-align: center;
-
-            @media (max-width: 991px) {
-                display: none;
-            }
-        }
-
         .ctaContent {
             max-width: 720px;
 
@@ -862,13 +854,10 @@
         }
     }
 
-    .owl-carousel.owl-theme.roadmapSlider.owl-loaded.owl-drag {
-        border-bottom: 5px solid #474CB5;
-    }
-
     .roadmapSlider {
         position: relative;
         padding-bottom: 5px;
+        border-bottom: 5px solid #474CB5;
 
         .owl-stage {
             display: flex;
@@ -1061,14 +1050,6 @@
         }
     }
 
-    .avatar {
-        position: relative;
-
-        @media (max-width: 1200px) {
-            display: none;
-        }
-    }
-
     .robotCol {
         @media (max-width: 1200px) {
             display: none;
@@ -1255,14 +1236,6 @@
 
     @media (max-width: 767px) {
         padding: 45px 0;
-    }
-
-    .heading {
-
-        h2,
-        p {
-            color: $color-white;
-        }
     }
 
     .developmentFirmCarousel {
