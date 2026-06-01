@@ -103,7 +103,16 @@
 }
 
 .heroSection {
-    min-height: calc(100vh - 55px);
+    min-height: calc(100vh - 76px);
+
+    @media (max-width: 1200px) {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 60px 0;
+    }
 
     .heroVideoBg {
         object-fit: cover;
@@ -161,7 +170,7 @@
     }
 
     .heroImg {
-        max-width: 460px;
+        max-width: 375px;
     }
 }
 
@@ -479,7 +488,7 @@
 
         @media (max-width: 767px) {
             text-align: left;
-          
+
         }
     }
 
@@ -656,7 +665,7 @@
 
             p {
                 margin-bottom: 30px;
-    
+
             }
 
             @media (max-width: 991px) {
@@ -778,10 +787,10 @@
             height: auto;
             border-radius: 24px;
 
-            
-                    @media (max-width: 1199px) {
-                        display: none;
-                    }
+
+            @media (max-width: 1199px) {
+                display: none;
+            }
         }
     }
 

@@ -207,7 +207,18 @@ li {
 }
 
 .heroSection {
-  min-height: calc(100vh - 55px);
+  min-height: calc(100vh - 76px);
+}
+@media (max-width: 1200px) {
+  .heroSection {
+    min-height: auto;
+    padding: 80px 0;
+  }
+}
+@media (max-width: 576px) {
+  .heroSection {
+    padding: 60px 0;
+  }
 }
 .heroSection .heroVideoBg {
   object-fit: cover;
@@ -265,7 +276,7 @@ li {
   }
 }
 .heroSection .heroImg {
-  max-width: 460px;
+  max-width: 375px;
 }
 
 .whoSection {
