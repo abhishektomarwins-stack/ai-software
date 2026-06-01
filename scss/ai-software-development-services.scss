@@ -568,26 +568,58 @@
         z-index: 2;
         overflow: hidden;
         border-radius: 24px;
-        border: 1px solid rgba($color-white, 0.12);
+        border: 1px solid rgba($color-primary-bg, 0.35); 
         backdrop-filter: blur(14px);
 
         .row {
             margin: 0;
+
+            > div {
+                padding: 0 !important;
+                border: none !important;
+            }
         }
     }
 
     .industryCard {
         position: relative;
         height: 100%;
-        padding: 30px 25px;
-        border-right: 1px solid rgba($color-white, 0.12);
-        border-bottom: 1px solid rgba($color-white, 0.12);
-        background: rgba(255, 255, 255, 0.04);
+        padding: 40px 30px;
+        background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(14px);
-        transition: transform 0.3s ease, background 0.3s ease;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease;
+        border: none !important;
 
         @media (max-width: 767px) {
-            padding: 40px 24px;
+            padding: 35px 24px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .row > div:nth-child(2n) .industryCard {
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 40px;
+                bottom: 40px;
+                width: 2px;
+                background: rgba($color-primary-bg, 0.35);
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .row > div:not(:nth-child(3n+1)) .industryCard {
+            &::before {
+                content: '';
+                position: absolute; 
+                left: 0;
+                top: 45px; 
+                bottom: 45px; 
+                width: 2px;
+                background: rgba($color-primary-bg, 0.35); 
+            }
         }
     }
 
@@ -597,8 +629,8 @@
         color: transparent;
         font-size: $font-size-50;
         font-weight: $font-weight-bold;
-        transform: rotate(-91deg);
-        -webkit-text-stroke: 1px rgba($color-white, 0.7);
+        transform: rotate(-90deg);
+        -webkit-text-stroke: 1.5px rgba($color-white, 0.7);
 
         @media (max-width: 576px) {
             margin-bottom: 16px;
@@ -619,9 +651,10 @@
 
     .industryCardText {
         margin-bottom: 0;
-        color: $color-white;
+        color: rgba($color-white, 0.85); 
         font-size: $font-size-16;
         font-weight: $font-weight-regular;
+        line-height: 1.5;
 
         @media (max-width: 576px) {
             font-size: $font-size-14;
