@@ -76,8 +76,8 @@ li {
   .common-btn {
     display: flex;
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    max-width: 280px;
+    margin: 0 auto 0 0;
     font-size: 14px;
     padding: 12px 24px;
   }
@@ -88,6 +88,25 @@ li {
     padding: 11px 20px;
     border-radius: 10px;
   }
+}
+
+.marqueeWrapper {
+  background: #d9f08a;
+}
+.marqueeWrapper .marqueeContent {
+  display: inline-block;
+  animation: marqueeAnimation 20s linear infinite;
+}
+.marqueeWrapper .marqueeContent span {
+  margin-right: 60px;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+.marqueeWrapper .marqueeContent span img {
+  padding-left: 12px;
+}
+.marqueeWrapper .marqueeContent span.tag {
+  margin-right: 200px;
 }
 
 /*# sourceMappingURL=common.css.map */

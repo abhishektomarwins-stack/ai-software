@@ -76,8 +76,8 @@ li {
   .common-btn {
     display: flex;
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    max-width: 280px;
+    margin: 0 auto 0 0;
     font-size: 14px;
     padding: 12px 24px;
   }
@@ -225,7 +225,12 @@ li {
     flex: 1 1 100%;
     max-width: 100%;
     padding-right: 0;
-    text-align: center;
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .heroSection .heroLeft {
+    padding: 0 10px;
   }
 }
 .heroSection h1 {
@@ -240,7 +245,6 @@ li {
   .heroSection h1 {
     font-size: 22px;
     margin-bottom: 14px;
-    padding: 0 10px;
   }
 }
 .heroSection p {
@@ -250,7 +254,6 @@ li {
   .heroSection p {
     font-size: 13px;
     margin-bottom: 20px;
-    padding: 0 10px;
   }
 }
 .heroSection .heroRight {
@@ -419,7 +422,7 @@ li {
 }
 @media (max-width: 991px) {
   .solutionsSection .solutionsHeading {
-    text-align: center;
+    text-align: left;
     font-size: 24px;
   }
 }
@@ -428,7 +431,7 @@ li {
 }
 @media (max-width: 991px) {
   .solutionsSection .solutionsIntro {
-    text-align: center;
+    text-align: left;
   }
 }
 .solutionsSection .solutionsCard {
@@ -475,7 +478,7 @@ li {
 @media (max-width: 991px) {
   .solutionCta .ctaContent {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }
 .solutionCta .ctaContent h3 {
@@ -500,6 +503,13 @@ li {
 .servicesSection .sectionHeadingWrap {
   max-width: 850px;
   margin: 0 auto 50px;
+}
+@media (max-width: 991px) {
+  .servicesSection .sectionHeadingWrap {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 .servicesSection .sectionHeading {
   color: #000000;
@@ -554,11 +564,13 @@ li {
 @media (max-width: 767px) {
   .servicesSection .aiSolutionImage {
     max-width: 280px;
+    margin: 0 auto 0 0;
   }
 }
 @media (max-width: 576px) {
   .servicesSection .aiSolutionImage {
     max-width: 240px;
+    margin: 0 auto 0 0;
   }
 }
 .servicesSection .aiSolutionContent {
@@ -566,7 +578,7 @@ li {
 }
 @media (max-width: 767px) {
   .servicesSection .aiSolutionContent {
-    text-align: center;
+    text-align: left;
   }
 }
 .servicesSection .aiSolutionTop {
@@ -577,13 +589,14 @@ li {
 }
 @media (max-width: 767px) {
   .servicesSection .aiSolutionTop {
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
   }
 }
 @media (max-width: 576px) {
   .servicesSection .aiSolutionTop {
     flex-direction: column;
+    align-items: flex-start !important;
   }
 }
 .servicesSection .aiSolutionTag {
@@ -619,6 +632,11 @@ li {
 }
 .industrySection .industryContent {
   margin-bottom: 60px;
+}
+@media (max-width: 991px) {
+  .industrySection .industryContent {
+    text-align: left !important;
+  }
 }
 .industrySection .industryTitle {
   color: #ffffff;
@@ -731,7 +749,7 @@ li {
 @media (max-width: 991px) {
   .aiSolutionSection .futureCta .ctaContent {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }
 .aiSolutionSection .enterpriseSolution {
@@ -1020,6 +1038,7 @@ li {
 @media (max-width: 991px) {
   .aiHeroSection .heroTitle {
     font-size: 26px;
+    text-align: left !important;
   }
 }
 .aiHeroSection .techStackWrapper {
@@ -1028,6 +1047,11 @@ li {
 @media (max-width: 767px) {
   .aiHeroSection .techStackWrapper {
     padding: 20px !important;
+  }
+}
+@media (max-width: 991px) {
+  .aiHeroSection .techStackWrapper .d-flex {
+    justify-content: flex-start !important;
   }
 }
 .aiHeroSection .techStackItem {
@@ -1046,7 +1070,7 @@ li {
 }
 @media (max-width: 1200px) {
   .aiHeroSection .heroContent {
-    text-align: center;
+    text-align: left;
   }
 }
 .aiHeroSection .heroContent .mainHeading {
@@ -1064,7 +1088,7 @@ li {
 }
 @media (max-width: 991px) {
   .aiHeroSection .heroContent .heroDescription {
-    margin: auto;
+    margin: 0;
   }
 }
 
@@ -1074,6 +1098,11 @@ li {
   overflow: hidden;
   padding: clamp(50px, 6vw, 90px) 0;
 }
+@media (max-width: 991px) {
+  .aiCostSection .text-center {
+    text-align: left !important;
+  }
+}
 .aiCostSection .costTitle {
   font-size: clamp(22px, 4vw, 32px);
   width: 100%;
@@ -1081,11 +1110,23 @@ li {
   margin: 0 auto 16px;
   text-align: center;
 }
+@media (max-width: 991px) {
+  .aiCostSection .costTitle {
+    text-align: left;
+    margin: 0 0 16px;
+  }
+}
 .aiCostSection .costDescription {
   max-width: 950px;
   font-size: clamp(14px, 2vw, 16px);
   margin: 0 auto 40px;
   text-align: center;
+}
+@media (max-width: 991px) {
+  .aiCostSection .costDescription {
+    text-align: left;
+    margin: 0 0 40px;
+  }
 }
 .aiCostSection .costWrapper {
   padding: clamp(15px, 4vw, 48px);
@@ -1160,6 +1201,8 @@ li {
 @media (max-width: 991px) {
   .startYourDream h2 {
     font-size: 60px;
+    text-align: left;
+    margin: 0;
   }
 }
 @media (max-width: 767px) {

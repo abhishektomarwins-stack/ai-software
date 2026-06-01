@@ -121,7 +121,11 @@
             flex: 1 1 100%;
             max-width: 100%;
             padding-right: 0;
-            text-align: center;
+            text-align: left;
+        }
+
+        @media (max-width: 576px) {
+            padding: 0 10px;
         }
     }
 
@@ -135,7 +139,6 @@
         @media (max-width: 576px) {
             font-size: $font-size-22;
             margin-bottom: 14px;
-            padding: 0 10px;
         }
     }
 
@@ -145,7 +148,6 @@
         @media (max-width: 576px) {
             font-size: $font-size-13;
             margin-bottom: 20px;
-            padding: 0 10px;
         }
     }
 
@@ -318,7 +320,7 @@
         font-size: $font-size-40;
 
         @media (max-width: 991px) {
-            text-align: center;
+            text-align: left;
             font-size: $font-size-24;
 
         }
@@ -329,7 +331,7 @@
         text-align: left;
 
         @media (max-width: 991px) {
-            text-align: center;
+            text-align: left;
         }
 
     }
@@ -383,7 +385,7 @@
 
         @media (max-width: 991px) {
             max-width: 100%;
-            text-align: center;
+            text-align: left;
         }
 
         h3 {
@@ -411,6 +413,12 @@
     .sectionHeadingWrap {
         max-width: 850px;
         margin: 0 auto 50px;
+
+        @media (max-width: 991px) {
+            text-align: left !important;
+            margin-left: 0;
+            margin-right: auto;
+        }
     }
 
     .sectionHeading {
@@ -466,10 +474,12 @@
 
         @media (max-width: 767px) {
             max-width: 280px;
+            margin: 0 auto 0 0;
         }
 
         @media (max-width: 576px) {
             max-width: 240px;
+            margin: 0 auto 0 0;
         }
     }
 
@@ -477,7 +487,7 @@
         max-width: 700px;
 
         @media (max-width: 767px) {
-            text-align: center;
+            text-align: left;
           
         }
     }
@@ -489,12 +499,13 @@
         align-items: center;
 
         @media (max-width: 767px) {
-            justify-content: center;
+            justify-content: flex-start;
             width: 100%;
         }
 
         @media (max-width: 576px) {
             flex-direction: column;
+            align-items: flex-start !important;
         }
     }
 
@@ -535,6 +546,9 @@
     .industryContent {
         margin-bottom: 60px;
 
+        @media (max-width: 991px) {
+            text-align: left !important;
+        }
     }
 
     .industryTitle {
@@ -656,7 +670,7 @@
 
             @media (max-width: 991px) {
                 max-width: 100%;
-                text-align: center;
+                text-align: left;
             }
         }
 
@@ -966,6 +980,7 @@
 
         @media (max-width: 991px) {
             font-size: $font-size-26;
+            text-align: left !important;
         }
     }
 
@@ -974,6 +989,12 @@
 
         @media (max-width: 767px) {
             padding: 20px !important;
+        }
+
+        .d-flex {
+            @media (max-width: 991px) {
+                justify-content: flex-start !important;
+            }
         }
     }
 
@@ -994,7 +1015,7 @@
     .heroContent {
 
         @media (max-width: 1200px) {
-            text-align: center;
+            text-align: left;
         }
 
         .mainHeading {
@@ -1011,7 +1032,7 @@
             max-width: 700px;
 
             @media (max-width: 991px) {
-                margin: auto;
+                margin: 0;
             }
         }
     }
@@ -1023,12 +1044,23 @@
     overflow: hidden;
     padding: clamp(50px, 6vw, 90px) 0;
 
+    .text-center {
+        @media (max-width: 991px) {
+            text-align: left !important;
+        }
+    }
+
     .costTitle {
         font-size: clamp(22px, 4vw, 32px);
         width: 100%;
         max-width: 700px;
         margin: 0 auto 16px;
         text-align: center;
+
+        @media (max-width: 991px) {
+            text-align: left;
+            margin: 0 0 16px;
+        }
     }
 
     .costDescription {
@@ -1036,6 +1068,11 @@
         font-size: clamp(14px, 2vw, 16px);
         margin: 0 auto 40px;
         text-align: center;
+
+        @media (max-width: 991px) {
+            text-align: left;
+            margin: 0 0 40px;
+        }
     }
 
     .costWrapper {
@@ -1120,6 +1157,8 @@
 
         @media (max-width: 991px) {
             font-size: $font-size-60;
+            text-align: left;
+            margin: 0;
         }
 
         @media (max-width: 767px) {
