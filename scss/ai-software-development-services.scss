@@ -3,26 +3,38 @@
 
 .siteHeader {
     padding: 15px 40px;
+    background: $color-black;
 
     .siteNav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
         .siteLogo img {
+            height: 36px;
+            width: auto;
+            transition: height 0.3s ease;
+
             @media (max-width: 576px) {
                 height: 30px !important;
             }
         }
 
-        .siteMenuToggle {
-            display: none;
-        }
-
         .siteMenuButton {
             display: none;
 
-            @media (max-width: 991px) {
-                display: block;
+            @media (max-width: 1199px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 color: $color-white;
                 font-size: 24px;
                 cursor: pointer;
+                padding: 6px 10px;
+                border-radius: 6px;
+                transition: all 0.3s ease;
             }
         }
 
@@ -31,35 +43,8 @@
             align-items: center;
             gap: 32px;
 
-            a {
-                color: $color-white;
-                text-decoration: none;
-                font-size: 14px;
-                font-weight: 600;
 
-                &:hover {
-                    color: $color-primary-bg;
-                }
-            }
-        }
-
-        .siteContact {
-            padding: 10px 24px;
-            border: 2px solid $color-white;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background: $color-white;
-                color: $color-black !important;
-                border-color: $color-white;
-            }
-        }
-
-        @media (max-width: 991px) {
-            padding: 16px 24px !important;
-
-            .siteMenu {
+            @media (max-width: 1199px) {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -70,30 +55,48 @@
                 gap: 0 !important;
                 padding: 16px 24px 24px;
                 background: $color-black;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+                z-index: 999;
 
-                a {
+                &.active {
+                    display: flex;
+                }
+            }
+
+            a {
+                color: $color-white;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+                transition: color 0.3s ease;
+
+                @media (max-width: 1199px) {
                     width: 100%;
                     padding: 14px 0;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
                 }
-            }
 
-            .siteContact {
-                margin-top: 16px;
-                text-align: center;
-                border-bottom: none !important;
-            }
-
-            .siteMenuToggle:checked~.siteMenu {
-                display: flex;
             }
         }
 
-        @media (max-width: 576px) {
-            padding: 14px 16px !important;
+        .siteContact {
+            padding: 10px 24px;
+            border: 2px solid $color-white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
 
-            .siteMenu {
-                padding: 16px;
+            @media (max-width: 1199px) {
+                width: 100%;
+                margin-top: 20px;
+                padding: 12px 24px;
+                text-align: center;
+                border: 2px solid $color-primary-bg !important;
+                background: $color-primary-bg;
+                color: $color-white !important;
+                border-radius: 8px;
+                display: block;
+                font-weight: 600;
             }
         }
     }
@@ -108,19 +111,18 @@
         z-index: 0;
     }
 
-    .heroOverlay {
-        z-index: 1;
-    }
-
-    .container {
-        z-index: 2;
-    }
-
     .heroLeft {
         flex: 1 1 560px;
         max-width: 620px;
         padding-right: 40px;
         padding-left: 0;
+
+        @media (max-width: 1200px) {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding-right: 0;
+            text-align: center;
+        }
     }
 
     h1 {
@@ -129,72 +131,40 @@
         @media (max-width: 991px) {
             font-size: $font-size-36;
         }
+
+        @media (max-width: 576px) {
+            font-size: $font-size-22;
+            margin-bottom: 14px;
+            padding: 0 10px;
+        }
     }
 
     p {
         margin-bottom: 32px;
+
+        @media (max-width: 576px) {
+            font-size: $font-size-13;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
     }
 
 
     .heroRight {
         flex: 1 1 420px;
+
+        @media (max-width: 1200px) {
+            display: none !important;
+        }
     }
 
     .heroImg {
         max-width: 460px;
     }
-
-    @media (max-width: 1200px) {
-        padding: 80px 0;
-
-        .heroLeft {
-            flex: 1 1 100%;
-            max-width: 100%;
-            padding-right: 0;
-            text-align: center;
-        }
-
-        .heroRight {
-            display: none !important;
-        }
-    }
-
-    @media (max-width: 991px) {
-        background:
-            radial-gradient(circle at 70% 30%, #1e264a 0%, #060810 100%),
-            #060810 !important;
-    }
-
-    @media (max-width: 576px) {
-        min-height: 100vh;
-        padding: 50px 0;
-
-        h1 {
-            font-size: $font-size-22;
-            margin-bottom: 14px;
-            padding: 0 10px;
-        }
-
-        p {
-            font-size: $font-size-13;
-            margin-bottom: 20px;
-            padding: 0 10px;
-        }
-
-
-    }
 }
 
 .whoSection {
     background: url('../images/who-bg.webp') center/cover no-repeat;
-
-    @media (max-width: 991px) {
-        padding: 60px 0;
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
 
     .whoBadge {
         background: #ffffff;
@@ -211,20 +181,6 @@
             font-size: $font-size-22;
             margin-bottom: 36px;
 
-            br {
-                display: none;
-            }
-        }
-    }
-
-    .whoStats {
-        >div:nth-child(4) .whoStat {
-            border-bottom: none !important;
-        }
-
-        @media (max-width: 576px) {
-            row-gap: 0 !important;
-            margin-bottom: 40px !important;
         }
     }
 
@@ -242,15 +198,10 @@
             text-align: center !important;
             padding: 24px 16px !important;
             border-right: none !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 
         }
 
-        @media (max-width: 576px) {
-            padding: 16px 12px !important;
-
-        }
     }
 
     .whoStatIcon {
@@ -266,15 +217,10 @@
             @media (max-width: 991px) {
                 height: 42px;
             }
-
-            @media (max-width: 576px) {
-                height: 36px !important;
-            }
         }
     }
 
     .whoStatNumber {
-        margin-bottom: 8px;
         font-size: $font-size-40;
         background: $hero-gradient-alt;
         background-clip: text;
@@ -347,12 +293,11 @@
     overflow: hidden;
     padding: 90px 0;
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        background: rgba(0, 0, 0, 0.45);
+    @media (max-width: 991px) {
+        padding: 50px 0;
+        background:
+            radial-gradient(circle at center, #141c36 0%, #070912 100%),
+            #070912 !important;
     }
 
     .heroVideoBg {
@@ -367,19 +312,14 @@
     }
 
     .solutionsHeading {
-        margin-bottom: 0;
         font-size: $font-size-40;
 
         @media (max-width: 991px) {
-            margin-bottom: 24px;
             text-align: center;
-            font-size: $font-size-32;
+            font-size: $font-size-24;
+
         }
 
-        @media (max-width: 576px) {
-            margin-bottom: 16px;
-            font-size: $font-size-24;
-        }
     }
 
     .solutionsIntro {
@@ -387,13 +327,8 @@
 
         @media (max-width: 991px) {
             text-align: center;
-            font-size: $font-size-15;
         }
 
-        @media (max-width: 576px) {
-            padding: 0 16px;
-            font-size: $font-size-13;
-        }
     }
 
     .solutionsCard {
@@ -423,68 +358,40 @@
             border-top: 2px solid $color-white;
         }
 
-        p {
-            color: rgba($color-white, 0.88);
-        }
-    }
-
-    @media (max-width: 991px) {
-        padding: 50px 0;
-        background:
-            radial-gradient(circle at center, #141c36 0%, #070912 100%),
-            #070912 !important;
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
     }
 }
 
 .solutionCta {
     margin-top: -60px;
 
+    @media (max-width: 991px) {
+        margin-top: -40px;
+    }
+
     .ctaWrapper {
         padding: 44px 60px;
         border-radius: 18px;
         background: url("../images/custom-bg.webp") center / cover no-repeat;
 
-        @media (max-width: 720px) {
-            padding: 30px 20px;
-        }
     }
 
     .ctaContent {
         max-width: 470px;
 
-        h3 {
-            color: #111;
-            font-size: $font-size-30;
-            font-weight: $font-weight-bold;
-
-            @media (max-width: 540px) {
-                font-size: $font-size-22;
-            }
-        }
-
-        p {
-            font-size: $font-size-16;
-
-            @media (max-width: 576px) {
-                font-size: $font-size-14;
-            }
-        }
-
-
-
         @media (max-width: 991px) {
             max-width: 100%;
             text-align: center;
         }
+
+        h3 {
+            font-weight: $font-weight-bold;
+        }
+
     }
 
     .rightImg {
         position: absolute;
-        right: -2px;
+        right: -13px;
         bottom: 52px;
         width: 100%;
         max-width: 400px;
@@ -493,55 +400,73 @@
             display: none;
         }
     }
-
-    @media (max-width: 991px) {
-        margin-top: -40px;
-    }
-
-    @media (max-width: 576px) {
-        margin-top: -20px;
-    }
 }
 
 .servicesSection {
-    padding: 50px 0;
+    padding: 80px 0;
 
     .sectionHeadingWrap {
         max-width: 850px;
-        margin: 0 auto 20px;
-
-        @media (max-width: 768px) {
-            margin-bottom: 50px;
-        }
+        margin: 0 auto 50px;
     }
 
     .sectionHeading {
-        margin-bottom: 24px;
         color: $color-black;
         font-size: $font-size-40;
         font-weight: $font-weight-bold;
 
+        @media (max-width: 991px) {
+            font-size: 32px;
+        }
+
         @media (max-width: 576px) {
-            font-size: $font-size-30;
+            font-size: 24px;
         }
     }
 
-    .sectionDescription,
-    .aiSolutionDescription {
-        color: $color-black;
-        font-size: $font-size-16;
+    .sectionDescription {
+        font-size: 16px;
+        color: rgba($color-black, 0.7);
+        margin-top: 16px;
 
         @media (max-width: 576px) {
-            font-size: $font-size-15;
+            font-size: 14px;
         }
     }
 
     .aiSolutionItem {
-        padding: 32px 0;
-        border-bottom: 1px solid rgba($color-black, 0.25);
+        padding: 40px 0;
+        border-bottom: 1px solid rgba($color-black, 0.15);
+
+        &:last-child {
+            border-bottom: none;
+        }
 
         @media (max-width: 767px) {
-            row-gap: 24px;
+            padding: 30px 0;
+            row-gap: 28px;
+        }
+    }
+
+    .aiSolutionImage {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        &:hover {
+            transform: translateY(-6px);
+        }
+
+        @media (max-width: 767px) {
+            max-width: 280px;
+        }
+
+        @media (max-width: 576px) {
+            max-width: 240px;
         }
     }
 
@@ -549,26 +474,39 @@
         max-width: 700px;
 
         @media (max-width: 767px) {
-            max-width: 100%;
+            text-align: center;
+          
         }
     }
 
     .aiSolutionTop {
         gap: 18px;
         margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            justify-content: center;
+            width: 100%;
+        }
 
         @media (max-width: 576px) {
             flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
         }
     }
 
     .aiSolutionTag {
-        padding: 8px 16px;
+        padding: 6px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
         border-radius: 5px;
         background: linear-gradient(90deg, #5D7CFF 0%, #C86EFF 100%);
         color: #ffffff;
+        box-shadow: 0 4px 12px rgba(93, 124, 255, 0.25);
+        display: inline-block;
+        flex-shrink: 0;
     }
 
     .aiSolutionHeading {
@@ -576,17 +514,14 @@
         font-size: $font-size-28;
         font-weight: $font-weight-semibold;
 
-        @media (max-width: 991px) {
-            font-size: $font-size-24;
-        }
-
         @media (max-width: 576px) {
-            font-size: $font-size-20;
+            font-size: 20px;
         }
     }
 
-    @media (max-width: 576px) {
-        padding: 40px 0;
+    .aiSolutionDescription {
+        font-size: 16px;
+
     }
 }
 
@@ -597,28 +532,18 @@
     .industryContent {
         margin-bottom: 60px;
 
-        @media (max-width: 767px) {
-            margin-bottom: 36px;
-        }
     }
 
     .industryTitle {
         color: $color-white;
         font-weight: $font-weight-bold;
 
-        @media (max-width: 576px) {
-            font-size: $font-size-22;
-        }
     }
 
     .industryDescription {
         margin-bottom: 0;
         color: rgba($color-white, 0.9);
-        font-size: $font-size-16;
 
-        @media (max-width: 576px) {
-            font-size: $font-size-14;
-        }
     }
 
     .industryCardWrapper {
@@ -686,9 +611,6 @@
         }
     }
 
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
 }
 
 .aiSolutionSection {
@@ -720,21 +642,14 @@
                 font-weight: $font-weight-semibold;
 
                 @media (max-width: 767px) {
-                    font-size: $font-size-28;
+                    font-size: $font-size-22;
                 }
             }
 
             p {
                 margin-bottom: 30px;
-                color: #222;
-                font-size: $font-size-16;
-
-                @media (max-width: 576px) {
-                    font-size: $font-size-14;
-                }
+    
             }
-
-
 
             @media (max-width: 991px) {
                 max-width: 100%;
@@ -834,9 +749,6 @@
         }
     }
 
-    @media (max-width: 576px) {
-        padding: 40px 0;
-    }
 }
 
 .roadmapSection {
@@ -848,6 +760,7 @@
     position: relative;
     overflow: hidden;
 
+
     .roadmapImage {
         padding-right: 20px;
 
@@ -857,10 +770,10 @@
             height: auto;
             border-radius: 24px;
 
-        }
-
-        @media (max-width: 1199px) {
-            display: none;
+            
+                    @media (max-width: 1199px) {
+                        display: none;
+                    }
         }
     }
 
@@ -868,18 +781,33 @@
 
         .roadmapTitle {
             font-size: $font-size-40;
-            color: $color-black;
             font-weight: $font-weight-bold;
             line-height: 1.2;
             margin-bottom: 15px;
+
+            @media (max-width: 1199px) {
+                font-size: $font-size-28;
+            }
+
+            @media (max-width: 576px) {
+                font-size: $font-size-24;
+            }
         }
 
         .roadmapDescription {
             font-size: $font-size-18;
-            color: #444;
             margin-bottom: 40px;
             max-width: 900px;
             line-height: 1.6;
+
+            @media (max-width: 1199px) {
+                font-size: $font-size-15;
+                margin-bottom: 28px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: $font-size-14;
+            }
         }
     }
 
@@ -887,6 +815,16 @@
         position: relative;
         padding-bottom: 5px;
         border-bottom: 5px solid #474CB5;
+
+        @media (max-width: 1199px) {
+            padding-bottom: 4px;
+            border-bottom: 4px solid #474CB5;
+        }
+
+        @media (max-width: 576px) {
+            padding-bottom: 3px;
+            border-bottom: 3px solid #474CB5;
+        }
 
         .owl-stage {
             display: flex;
@@ -914,6 +852,16 @@
             height: 100%;
             transition: all 0.3s ease;
 
+            @media (max-width: 1199px) {
+                padding-right: 16px;
+                padding-bottom: 24px;
+            }
+
+            @media (max-width: 576px) {
+                padding-right: 12px;
+                padding-bottom: 22px;
+            }
+
             .stepNumber {
                 width: 50px;
                 height: 50px;
@@ -929,6 +877,19 @@
                 color: $color-white;
                 margin-bottom: 24px;
                 box-shadow: 0 4px 10px rgba(87, 169, 255, 0.3);
+
+                @media (max-width: 1199px) {
+                    width: 44px;
+                    height: 44px;
+                    font-size: $font-size-22;
+                }
+
+                @media (max-width: 576px) {
+                    width: 40px;
+                    height: 40px;
+                    font-size: $font-size-20;
+                    margin-bottom: 18px;
+                }
             }
 
             .stepTitle {
@@ -936,6 +897,14 @@
                 font-weight: $font-weight-bold;
                 color: $color-black;
                 margin-bottom: 12px;
+
+                @media (max-width: 1199px) {
+                    font-size: $font-size-20;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: $font-size-18;
+                }
             }
 
             .stepDescription {
@@ -943,6 +912,14 @@
                 color: #555;
                 line-height: 1.5;
                 margin-bottom: 0;
+
+                @media (max-width: 1199px) {
+                    font-size: $font-size-14;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: $font-size-13;
+                }
             }
 
             &::after {
@@ -955,85 +932,21 @@
                 background: transparent;
                 transition: opacity 0.25s ease;
                 z-index: 10;
+
+                @media (max-width: 1199px) {
+                    bottom: -4px;
+                    height: 4px;
+                }
+
+                @media (max-width: 576px) {
+                    bottom: -3px;
+                    height: 3px;
+                }
             }
         }
 
         .owl-nav {
             display: none;
-        }
-    }
-
-    @media (max-width: 1199px) {
-        padding: 60px 0;
-
-        .roadmapContent {
-            padding-left: 0;
-
-            .roadmapTitle {
-                font-size: $font-size-28;
-            }
-
-            .roadmapDescription {
-                font-size: $font-size-15;
-                margin-bottom: 28px;
-            }
-        }
-
-        .roadmapSlider {
-            .roadmapStepItem {
-                padding-right: 16px;
-                padding-bottom: 24px;
-
-                .stepNumber {
-                    width: 44px;
-                    height: 44px;
-                    font-size: $font-size-22;
-                }
-
-                .stepTitle {
-                    font-size: $font-size-20;
-                }
-
-                .stepDescription {
-                    font-size: $font-size-14;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 576px) {
-        padding: 40px 0;
-
-        .roadmapContent {
-            .roadmapTitle {
-                font-size: $font-size-24;
-            }
-
-            .roadmapDescription {
-                font-size: $font-size-14;
-            }
-        }
-
-        .roadmapSlider {
-            .roadmapStepItem {
-                padding-right: 12px;
-                padding-bottom: 22px;
-
-                .stepNumber {
-                    width: 40px;
-                    height: 40px;
-                    font-size: $font-size-20;
-                    margin-bottom: 18px;
-                }
-
-                .stepTitle {
-                    font-size: $font-size-18;
-                }
-
-                .stepDescription {
-                    font-size: $font-size-13;
-                }
-            }
         }
     }
 }
@@ -1052,8 +965,7 @@
         max-width: 600px;
 
         @media (max-width: 991px) {
-            font-size: $font-size-18;
-            text-align: center;
+            font-size: $font-size-26;
         }
     }
 
@@ -1079,28 +991,10 @@
         }
     }
 
-    .robotCol {
-        @media (max-width: 1200px) {
-            display: none;
-        }
-    }
-
-    .contentCol {
-        @media (max-width: 1200px) {
-            width: 100%;
-        }
-    }
-
     .heroContent {
 
         @media (max-width: 1200px) {
             text-align: center;
-            max-width: 800px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         .mainHeading {
@@ -1119,13 +1013,7 @@
             @media (max-width: 991px) {
                 margin: auto;
             }
-
-            @media (max-width: 767px) {
-                font-size: $font-size-14;
-            }
         }
-
-
     }
 }
 
@@ -1137,7 +1025,6 @@
 
     .costTitle {
         font-size: clamp(22px, 4vw, 32px);
-        color: $color-black;
         width: 100%;
         max-width: 700px;
         margin: 0 auto 16px;
@@ -1147,10 +1034,8 @@
     .costDescription {
         max-width: 950px;
         font-size: clamp(14px, 2vw, 16px);
-        color: #555;
         margin: 0 auto 40px;
         text-align: center;
-        line-height: 1.6;
     }
 
     .costWrapper {
@@ -1206,13 +1091,8 @@
                     }
                 }
             }
-
-
-
         }
     }
-
-
 }
 
 .startYourDream {
@@ -1224,16 +1104,8 @@
     background-position: center;
     padding: 173px 0;
 
-    @media (max-width: 991px) {
-        padding: 100px 0;
-    }
-
     @media (max-width: 767px) {
         padding: 60px 0;
-    }
-
-    @media (max-width: 576px) {
-        padding: 45px 0 10px;
     }
 
     h2 {

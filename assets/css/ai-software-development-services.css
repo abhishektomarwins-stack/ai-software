@@ -111,24 +111,39 @@ li {
 
 .siteHeader {
   padding: 15px 40px;
+  background: #000000;
+}
+.siteHeader .siteNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.siteHeader .siteNav .siteLogo img {
+  height: 36px;
+  width: auto;
+  transition: height 0.3s ease;
 }
 @media (max-width: 576px) {
   .siteHeader .siteNav .siteLogo img {
     height: 30px !important;
   }
 }
-.siteHeader .siteNav .siteMenuToggle {
-  display: none;
-}
 .siteHeader .siteNav .siteMenuButton {
   display: none;
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .siteHeader .siteNav .siteMenuButton {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
   }
 }
 .siteHeader .siteNav .siteMenu {
@@ -136,30 +151,7 @@ li {
   align-items: center;
   gap: 32px;
 }
-.siteHeader .siteNav .siteMenu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-}
-.siteHeader .siteNav .siteMenu a:hover {
-  color: #059FFF;
-}
-.siteHeader .siteNav .siteContact {
-  padding: 10px 24px;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-.siteHeader .siteNav .siteContact:hover {
-  background: #ffffff;
-  color: #000000 !important;
-  border-color: #ffffff;
-}
-@media (max-width: 991px) {
-  .siteHeader .siteNav {
-    padding: 16px 24px !important;
-  }
+@media (max-width: 1199px) {
   .siteHeader .siteNav .siteMenu {
     position: absolute;
     top: 100%;
@@ -171,27 +163,46 @@ li {
     gap: 0 !important;
     padding: 16px 24px 24px;
     background: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 999;
   }
+  .siteHeader .siteNav .siteMenu.active {
+    display: flex;
+  }
+}
+.siteHeader .siteNav .siteMenu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+@media (max-width: 1199px) {
   .siteHeader .siteNav .siteMenu a {
     width: 100%;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .siteHeader .siteNav .siteContact {
-    margin-top: 16px;
-    text-align: center;
-    border-bottom: none !important;
-  }
-  .siteHeader .siteNav .siteMenuToggle:checked ~ .siteMenu {
-    display: flex;
-  }
 }
-@media (max-width: 576px) {
-  .siteHeader .siteNav {
-    padding: 14px 16px !important;
-  }
-  .siteHeader .siteNav .siteMenu {
-    padding: 16px;
+.siteHeader .siteNav .siteContact {
+  padding: 10px 24px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1199px) {
+  .siteHeader .siteNav .siteContact {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 24px;
+    text-align: center;
+    border: 2px solid #059FFF !important;
+    background: #059FFF;
+    color: #ffffff !important;
+    border-radius: 8px;
+    display: block;
+    font-weight: 600;
   }
 }
 
@@ -203,17 +214,19 @@ li {
   object-position: center;
   z-index: 0;
 }
-.heroSection .heroOverlay {
-  z-index: 1;
-}
-.heroSection .container {
-  z-index: 2;
-}
 .heroSection .heroLeft {
   flex: 1 1 560px;
   max-width: 620px;
   padding-right: 40px;
   padding-left: 0;
+}
+@media (max-width: 1200px) {
+  .heroSection .heroLeft {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
 }
 .heroSection h1 {
   font-size: 50px;
@@ -223,63 +236,37 @@ li {
     font-size: 36px;
   }
 }
-.heroSection p {
-  margin-bottom: 32px;
-}
-.heroSection .heroRight {
-  flex: 1 1 420px;
-}
-.heroSection .heroImg {
-  max-width: 460px;
-}
-@media (max-width: 1200px) {
-  .heroSection {
-    padding: 80px 0;
-  }
-  .heroSection .heroLeft {
-    flex: 1 1 100%;
-    max-width: 100%;
-    padding-right: 0;
-    text-align: center;
-  }
-  .heroSection .heroRight {
-    display: none !important;
-  }
-}
-@media (max-width: 991px) {
-  .heroSection {
-    background: radial-gradient(circle at 70% 30%, #1e264a 0%, #060810 100%), #060810 !important;
-  }
-}
 @media (max-width: 576px) {
-  .heroSection {
-    min-height: 100vh;
-    padding: 50px 0;
-  }
   .heroSection h1 {
     font-size: 22px;
     margin-bottom: 14px;
     padding: 0 10px;
   }
+}
+.heroSection p {
+  margin-bottom: 32px;
+}
+@media (max-width: 576px) {
   .heroSection p {
     font-size: 13px;
     margin-bottom: 20px;
     padding: 0 10px;
   }
 }
+.heroSection .heroRight {
+  flex: 1 1 420px;
+}
+@media (max-width: 1200px) {
+  .heroSection .heroRight {
+    display: none !important;
+  }
+}
+.heroSection .heroImg {
+  max-width: 460px;
+}
 
 .whoSection {
   background: url("../images/who-bg.webp") center/cover no-repeat;
-}
-@media (max-width: 991px) {
-  .whoSection {
-    padding: 60px 0;
-  }
-}
-@media (max-width: 576px) {
-  .whoSection {
-    padding: 40px 0;
-  }
 }
 .whoSection .whoBadge {
   background: #ffffff;
@@ -295,18 +282,6 @@ li {
   .whoSection .whoHeading {
     font-size: 22px;
     margin-bottom: 36px;
-  }
-  .whoSection .whoHeading br {
-    display: none;
-  }
-}
-.whoSection .whoStats > div:nth-child(4) .whoStat {
-  border-bottom: none !important;
-}
-@media (max-width: 576px) {
-  .whoSection .whoStats {
-    row-gap: 0 !important;
-    margin-bottom: 40px !important;
   }
 }
 .whoSection .whoStat {
@@ -324,13 +299,7 @@ li {
     text-align: center !important;
     padding: 24px 16px !important;
     border-right: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-  }
-}
-@media (max-width: 576px) {
-  .whoSection .whoStat {
-    padding: 16px 12px !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
   }
 }
 .whoSection .whoStatIcon {
@@ -348,13 +317,7 @@ li {
     height: 42px;
   }
 }
-@media (max-width: 576px) {
-  .whoSection .whoStatIcon img {
-    height: 36px !important;
-  }
-}
 .whoSection .whoStatNumber {
-  margin-bottom: 8px;
   font-size: 40px;
   background: linear-gradient(180deg, #1868D0 0%, #C157F2 100%);
   background-clip: text;
@@ -431,12 +394,11 @@ li {
   overflow: hidden;
   padding: 90px 0;
 }
-.solutionsSection::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: rgba(0, 0, 0, 0.45);
+@media (max-width: 991px) {
+  .solutionsSection {
+    padding: 50px 0;
+    background: radial-gradient(circle at center, #141c36 0%, #070912 100%), #070912 !important;
+  }
 }
 .solutionsSection .heroVideoBg {
   z-index: 0;
@@ -448,19 +410,11 @@ li {
   z-index: 1;
 }
 .solutionsSection .solutionsHeading {
-  margin-bottom: 0;
   font-size: 40px;
 }
 @media (max-width: 991px) {
   .solutionsSection .solutionsHeading {
-    margin-bottom: 24px;
     text-align: center;
-    font-size: 32px;
-  }
-}
-@media (max-width: 576px) {
-  .solutionsSection .solutionsHeading {
-    margin-bottom: 16px;
     font-size: 24px;
   }
 }
@@ -470,13 +424,6 @@ li {
 @media (max-width: 991px) {
   .solutionsSection .solutionsIntro {
     text-align: center;
-    font-size: 15px;
-  }
-}
-@media (max-width: 576px) {
-  .solutionsSection .solutionsIntro {
-    padding: 0 16px;
-    font-size: 13px;
   }
 }
 .solutionsSection .solutionsCard {
@@ -503,54 +450,22 @@ li {
   border: 0;
   border-top: 2px solid #ffffff;
 }
-.solutionsSection .solutionsCard p {
-  color: rgba(255, 255, 255, 0.88);
-}
-@media (max-width: 991px) {
-  .solutionsSection {
-    padding: 50px 0;
-    background: radial-gradient(circle at center, #141c36 0%, #070912 100%), #070912 !important;
-  }
-}
-@media (max-width: 576px) {
-  .solutionsSection {
-    padding: 40px 0;
-  }
-}
 
 .solutionCta {
   margin-top: -60px;
+}
+@media (max-width: 991px) {
+  .solutionCta {
+    margin-top: -40px;
+  }
 }
 .solutionCta .ctaWrapper {
   padding: 44px 60px;
   border-radius: 18px;
   background: url("../images/custom-bg.webp") center/cover no-repeat;
 }
-@media (max-width: 720px) {
-  .solutionCta .ctaWrapper {
-    padding: 30px 20px;
-  }
-}
 .solutionCta .ctaContent {
   max-width: 470px;
-}
-.solutionCta .ctaContent h3 {
-  color: #111;
-  font-size: 30px;
-  font-weight: 700;
-}
-@media (max-width: 540px) {
-  .solutionCta .ctaContent h3 {
-    font-size: 22px;
-  }
-}
-.solutionCta .ctaContent p {
-  font-size: 16px;
-}
-@media (max-width: 576px) {
-  .solutionCta .ctaContent p {
-    font-size: 14px;
-  }
 }
 @media (max-width: 991px) {
   .solutionCta .ctaContent {
@@ -558,9 +473,12 @@ li {
     text-align: center;
   }
 }
+.solutionCta .ctaContent h3 {
+  font-weight: 700;
+}
 .solutionCta .rightImg {
   position: absolute;
-  right: -2px;
+  right: -13px;
   bottom: 52px;
   width: 100%;
   max-width: 400px;
@@ -570,58 +488,72 @@ li {
     display: none;
   }
 }
-@media (max-width: 991px) {
-  .solutionCta {
-    margin-top: -40px;
-  }
-}
-@media (max-width: 576px) {
-  .solutionCta {
-    margin-top: -20px;
-  }
-}
 
 .servicesSection {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 .servicesSection .sectionHeadingWrap {
   max-width: 850px;
-  margin: 0 auto 20px;
-}
-@media (max-width: 768px) {
-  .servicesSection .sectionHeadingWrap {
-    margin-bottom: 50px;
-  }
+  margin: 0 auto 50px;
 }
 .servicesSection .sectionHeading {
-  margin-bottom: 24px;
   color: #000000;
   font-size: 40px;
   font-weight: 700;
 }
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .servicesSection .sectionHeading {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
-.servicesSection .sectionDescription,
-.servicesSection .aiSolutionDescription {
-  color: #000000;
+@media (max-width: 576px) {
+  .servicesSection .sectionHeading {
+    font-size: 24px;
+  }
+}
+.servicesSection .sectionDescription {
   font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 16px;
 }
 @media (max-width: 576px) {
-  .servicesSection .sectionDescription,
-  .servicesSection .aiSolutionDescription {
-    font-size: 15px;
+  .servicesSection .sectionDescription {
+    font-size: 14px;
   }
 }
 .servicesSection .aiSolutionItem {
-  padding: 32px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.servicesSection .aiSolutionItem:last-child {
+  border-bottom: none;
 }
 @media (max-width: 767px) {
   .servicesSection .aiSolutionItem {
-    row-gap: 24px;
+    padding: 30px 0;
+    row-gap: 28px;
+  }
+}
+.servicesSection .aiSolutionImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.servicesSection .aiSolutionImage:hover {
+  transform: translateY(-6px);
+}
+@media (max-width: 767px) {
+  .servicesSection .aiSolutionImage {
+    max-width: 280px;
+  }
+}
+@media (max-width: 576px) {
+  .servicesSection .aiSolutionImage {
+    max-width: 240px;
   }
 }
 .servicesSection .aiSolutionContent {
@@ -629,45 +561,51 @@ li {
 }
 @media (max-width: 767px) {
   .servicesSection .aiSolutionContent {
-    max-width: 100%;
+    text-align: center;
   }
 }
 .servicesSection .aiSolutionTop {
   gap: 18px;
   margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .servicesSection .aiSolutionTop {
+    justify-content: center;
+    width: 100%;
+  }
 }
 @media (max-width: 576px) {
   .servicesSection .aiSolutionTop {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
   }
 }
 .servicesSection .aiSolutionTag {
-  padding: 8px 16px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   border-radius: 5px;
   background: linear-gradient(90deg, #5D7CFF 0%, #C86EFF 100%);
   color: #ffffff;
+  box-shadow: 0 4px 12px rgba(93, 124, 255, 0.25);
+  display: inline-block;
+  flex-shrink: 0;
 }
 .servicesSection .aiSolutionHeading {
   color: #000000;
   font-size: 28px;
   font-weight: 600;
 }
-@media (max-width: 991px) {
-  .servicesSection .aiSolutionHeading {
-    font-size: 24px;
-  }
-}
 @media (max-width: 576px) {
   .servicesSection .aiSolutionHeading {
     font-size: 20px;
   }
 }
-@media (max-width: 576px) {
-  .servicesSection {
-    padding: 40px 0;
-  }
+.servicesSection .aiSolutionDescription {
+  font-size: 16px;
 }
 
 .industrySection {
@@ -677,29 +615,13 @@ li {
 .industrySection .industryContent {
   margin-bottom: 60px;
 }
-@media (max-width: 767px) {
-  .industrySection .industryContent {
-    margin-bottom: 36px;
-  }
-}
 .industrySection .industryTitle {
   color: #ffffff;
   font-weight: 700;
 }
-@media (max-width: 576px) {
-  .industrySection .industryTitle {
-    font-size: 22px;
-  }
-}
 .industrySection .industryDescription {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 16px;
-}
-@media (max-width: 576px) {
-  .industrySection .industryDescription {
-    font-size: 14px;
-  }
 }
 .industrySection .industryCardWrapper {
   position: relative;
@@ -764,11 +686,6 @@ li {
     font-size: 14px;
   }
 }
-@media (max-width: 576px) {
-  .industrySection {
-    padding: 40px 0;
-  }
-}
 
 .aiSolutionSection {
   position: relative;
@@ -800,18 +717,11 @@ li {
 }
 @media (max-width: 767px) {
   .aiSolutionSection .futureCta .ctaContent h3 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 .aiSolutionSection .futureCta .ctaContent p {
   margin-bottom: 30px;
-  color: #222;
-  font-size: 16px;
-}
-@media (max-width: 576px) {
-  .aiSolutionSection .futureCta .ctaContent p {
-    font-size: 14px;
-  }
 }
 @media (max-width: 991px) {
   .aiSolutionSection .futureCta .ctaContent {
@@ -904,11 +814,6 @@ li {
   font-size: 15px;
   font-weight: 400;
 }
-@media (max-width: 576px) {
-  .aiSolutionSection {
-    padding: 40px 0;
-  }
-}
 
 .roadmapSection {
   padding: 80px 0;
@@ -926,28 +831,59 @@ li {
   border-radius: 24px;
 }
 @media (max-width: 1199px) {
-  .roadmapSection .roadmapImage {
+  .roadmapSection .roadmapImage img {
     display: none;
   }
 }
 .roadmapSection .roadmapContent .roadmapTitle {
   font-size: 40px;
-  color: #000000;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 15px;
 }
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapContent .roadmapTitle {
+    font-size: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapContent .roadmapTitle {
+    font-size: 24px;
+  }
+}
 .roadmapSection .roadmapContent .roadmapDescription {
   font-size: 18px;
-  color: #444;
   margin-bottom: 40px;
   max-width: 900px;
   line-height: 1.6;
+}
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapContent .roadmapDescription {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapContent .roadmapDescription {
+    font-size: 14px;
+  }
 }
 .roadmapSection .roadmapSlider {
   position: relative;
   padding-bottom: 5px;
   border-bottom: 5px solid #474CB5;
+}
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapSlider {
+    padding-bottom: 4px;
+    border-bottom: 4px solid #474CB5;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapSlider {
+    padding-bottom: 3px;
+    border-bottom: 3px solid #474CB5;
+  }
 }
 .roadmapSection .roadmapSlider .owl-stage {
   display: flex;
@@ -970,6 +906,18 @@ li {
   height: 100%;
   transition: all 0.3s ease;
 }
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem {
+    padding-right: 16px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem {
+    padding-right: 12px;
+    padding-bottom: 22px;
+  }
+}
 .roadmapSection .roadmapSlider .roadmapStepItem .stepNumber {
   width: 50px;
   height: 50px;
@@ -984,17 +932,52 @@ li {
   margin-bottom: 24px;
   box-shadow: 0 4px 10px rgba(87, 169, 255, 0.3);
 }
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem .stepNumber {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem .stepNumber {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+}
 .roadmapSection .roadmapSlider .roadmapStepItem .stepTitle {
   font-size: 22px;
   font-weight: 700;
   color: #000000;
   margin-bottom: 12px;
 }
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem .stepTitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem .stepTitle {
+    font-size: 18px;
+  }
+}
 .roadmapSection .roadmapSlider .roadmapStepItem .stepDescription {
   font-size: 15px;
   color: #555;
   line-height: 1.5;
   margin-bottom: 0;
+}
+@media (max-width: 1199px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem .stepDescription {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmapSection .roadmapSlider .roadmapStepItem .stepDescription {
+    font-size: 13px;
+  }
 }
 .roadmapSection .roadmapSlider .roadmapStepItem::after {
   content: "";
@@ -1007,65 +990,20 @@ li {
   transition: opacity 0.25s ease;
   z-index: 10;
 }
-.roadmapSection .roadmapSlider .owl-nav {
-  display: none;
-}
 @media (max-width: 1199px) {
-  .roadmapSection {
-    padding: 60px 0;
-  }
-  .roadmapSection .roadmapContent {
-    padding-left: 0;
-  }
-  .roadmapSection .roadmapContent .roadmapTitle {
-    font-size: 28px;
-  }
-  .roadmapSection .roadmapContent .roadmapDescription {
-    font-size: 15px;
-    margin-bottom: 28px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem {
-    padding-right: 16px;
-    padding-bottom: 24px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem .stepNumber {
-    width: 44px;
-    height: 44px;
-    font-size: 22px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem .stepTitle {
-    font-size: 20px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem .stepDescription {
-    font-size: 14px;
+  .roadmapSection .roadmapSlider .roadmapStepItem::after {
+    bottom: -4px;
+    height: 4px;
   }
 }
 @media (max-width: 576px) {
-  .roadmapSection {
-    padding: 40px 0;
+  .roadmapSection .roadmapSlider .roadmapStepItem::after {
+    bottom: -3px;
+    height: 3px;
   }
-  .roadmapSection .roadmapContent .roadmapTitle {
-    font-size: 24px;
-  }
-  .roadmapSection .roadmapContent .roadmapDescription {
-    font-size: 14px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem {
-    padding-right: 12px;
-    padding-bottom: 22px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem .stepNumber {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    margin-bottom: 18px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem .stepTitle {
-    font-size: 18px;
-  }
-  .roadmapSection .roadmapSlider .roadmapStepItem .stepDescription {
-    font-size: 13px;
-  }
+}
+.roadmapSection .roadmapSlider .owl-nav {
+  display: none;
 }
 
 .aiHeroSection {
@@ -1079,8 +1017,7 @@ li {
 }
 @media (max-width: 991px) {
   .aiHeroSection .heroTitle {
-    font-size: 18px;
-    text-align: center;
+    font-size: 26px;
   }
 }
 .aiHeroSection .techStackWrapper {
@@ -1106,24 +1043,8 @@ li {
   }
 }
 @media (max-width: 1200px) {
-  .aiHeroSection .robotCol {
-    display: none;
-  }
-}
-@media (max-width: 1200px) {
-  .aiHeroSection .contentCol {
-    width: 100%;
-  }
-}
-@media (max-width: 1200px) {
   .aiHeroSection .heroContent {
     text-align: center;
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 }
 .aiHeroSection .heroContent .mainHeading {
@@ -1144,11 +1065,6 @@ li {
     margin: auto;
   }
 }
-@media (max-width: 767px) {
-  .aiHeroSection .heroContent .heroDescription {
-    font-size: 14px;
-  }
-}
 
 .aiCostSection {
   background: url("../images/cost-banner.webp") center center/cover no-repeat;
@@ -1158,7 +1074,6 @@ li {
 }
 .aiCostSection .costTitle {
   font-size: clamp(22px, 4vw, 32px);
-  color: #000000;
   width: 100%;
   max-width: 700px;
   margin: 0 auto 16px;
@@ -1167,10 +1082,8 @@ li {
 .aiCostSection .costDescription {
   max-width: 950px;
   font-size: clamp(14px, 2vw, 16px);
-  color: #555;
   margin: 0 auto 40px;
   text-align: center;
-  line-height: 1.6;
 }
 .aiCostSection .costWrapper {
   padding: clamp(15px, 4vw, 48px);
@@ -1229,19 +1142,9 @@ li {
   background-position: center;
   padding: 173px 0;
 }
-@media (max-width: 991px) {
-  .startYourDream {
-    padding: 100px 0;
-  }
-}
 @media (max-width: 767px) {
   .startYourDream {
     padding: 60px 0;
-  }
-}
-@media (max-width: 576px) {
-  .startYourDream {
-    padding: 45px 0 10px;
   }
 }
 .startYourDream h2 {

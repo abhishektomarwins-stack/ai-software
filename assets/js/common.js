@@ -36,7 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-        $(document).ready(function () {
+$(document).ready(function () {
+    // Toggle mobile menu
+    $(".siteMenuButton").click(function () {
+        $(".siteMenu").toggleClass("active");
+    });
+
     $(".roadmapSlider").owlCarousel({
         loop: false,
         margin: 30,
