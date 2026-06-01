@@ -200,10 +200,33 @@
         margin-bottom: 50px;
     }
 
+    .whoStats {
+        >div:nth-child(4) .whoStat {
+            border-bottom: none !important;
+        }
+    }
+
     .whoStat {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
         padding: 28px 24px;
-        border-right: 2px solid rgba(0, 0, 0, 0.14);
-        transition: transform 0.3s ease, background 0.3s ease;
+        border-right: 2px solid rgba(0, 0, 0, 0.08);
+        border-bottom: none;
+
+    }
+
+    .whoStatIcon {
+        display: flex;
+        margin-bottom: 12px;
+
+        img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
     }
 
     .whoStatNumber {
@@ -217,9 +240,10 @@
     }
 
     .whoStatLabel {
-        max-width: 130px;
-        font-size: 11px;
+        max-width: 140px;
+        font-size: $font-size-12;
         text-align: left;
+        color: #444444;
     }
 
     .whoCta {
@@ -244,13 +268,32 @@
         .whoStat {
             align-items: center;
             text-align: center !important;
-            padding: 16px 12px !important;
+            padding: 24px 16px !important;
             border-right: none !important;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+
+            &:hover {
+                transform: translateY(-5px);
+                background: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 15px 30px rgba(57, 88, 189, 0.06);
+            }
+        }
+
+        .whoStatIcon {
+            img {
+                height: 42px;
+            }
+        }
+
+        .whoStatNumber {
+            font-size: $font-size-36;
+            text-align: center;
         }
 
         .whoStatLabel {
             max-width: 100%;
+            text-align: center;
         }
 
         .whoCta {
@@ -285,16 +328,21 @@
         }
 
         .whoStat {
-            padding: 14px 8px !important;
+            padding: 16px 12px !important;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
         }
 
         .whoStatIcon {
-            width: 44px !important;
-            height: 44px !important;
+            img {
+                height: 36px !important;
+            }
         }
 
         .whoStatNumber {
-            font-size: $font-size-24;
+            font-size: $font-size-28;
         }
 
         .whoStatLabel {

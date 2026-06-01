@@ -281,10 +281,27 @@ li {
   font-size: 40px;
   margin-bottom: 50px;
 }
+.whoSection .whoStats > div:nth-child(4) .whoStat {
+  border-bottom: none !important;
+}
 .whoSection .whoStat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
   padding: 28px 24px;
-  border-right: 2px solid rgba(0, 0, 0, 0.14);
-  transition: transform 0.3s ease, background 0.3s ease;
+  border-right: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: none;
+}
+.whoSection .whoStatIcon {
+  display: flex;
+  margin-bottom: 12px;
+}
+.whoSection .whoStatIcon img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .whoSection .whoStatNumber {
   margin-bottom: 8px;
@@ -296,9 +313,10 @@ li {
   -webkit-text-fill-color: transparent;
 }
 .whoSection .whoStatLabel {
-  max-width: 130px;
-  font-size: 11px;
+  max-width: 140px;
+  font-size: 12px;
   text-align: left;
+  color: #444444;
 }
 .whoSection .whoCta {
   gap: 18px;
@@ -319,12 +337,26 @@ li {
   .whoSection .whoStat {
     align-items: center;
     text-align: center !important;
-    padding: 16px 12px !important;
+    padding: 24px 16px !important;
     border-right: none !important;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  .whoSection .whoStat:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 30px rgba(57, 88, 189, 0.06);
+  }
+  .whoSection .whoStatIcon img {
+    height: 42px;
+  }
+  .whoSection .whoStatNumber {
+    font-size: 36px;
+    text-align: center;
   }
   .whoSection .whoStatLabel {
     max-width: 100%;
+    text-align: center;
   }
   .whoSection .whoCta {
     flex-direction: column;
@@ -352,14 +384,16 @@ li {
     margin-bottom: 40px !important;
   }
   .whoSection .whoStat {
-    padding: 14px 8px !important;
+    padding: 16px 12px !important;
   }
-  .whoSection .whoStatIcon {
-    width: 44px !important;
-    height: 44px !important;
+  .whoSection .whoStat:hover {
+    transform: translateY(-3px);
+  }
+  .whoSection .whoStatIcon img {
+    height: 36px !important;
   }
   .whoSection .whoStatNumber {
-    font-size: 24px;
+    font-size: 28px;
   }
   .whoSection .whoStatLabel {
     font-size: 10px;
