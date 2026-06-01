@@ -278,10 +278,15 @@ li {
   font-size: 40px;
   margin-bottom: 50px;
 }
+@media (max-width: 991px) {
+  .whoSection .whoHeading {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+}
 @media (max-width: 576px) {
   .whoSection .whoHeading {
-    font-size: 22px;
-    margin-bottom: 36px;
+    font-size: 16px;
   }
 }
 .whoSection .whoStat {
@@ -838,7 +843,6 @@ li {
 .roadmapSection .roadmapContent .roadmapTitle {
   font-size: 40px;
   font-weight: 700;
-  line-height: 1.2;
   margin-bottom: 15px;
 }
 @media (max-width: 1199px) {
@@ -855,7 +859,6 @@ li {
   font-size: 18px;
   margin-bottom: 40px;
   max-width: 900px;
-  line-height: 1.6;
 }
 @media (max-width: 1199px) {
   .roadmapSection .roadmapContent .roadmapDescription {
@@ -966,7 +969,6 @@ li {
 .roadmapSection .roadmapSlider .roadmapStepItem .stepDescription {
   font-size: 15px;
   color: #555;
-  line-height: 1.5;
   margin-bottom: 0;
 }
 @media (max-width: 1199px) {
@@ -1119,7 +1121,6 @@ li {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  line-height: 1.5;
 }
 .aiCostSection .costWrapper .costCard .costList li i {
   width: 24px;
@@ -1149,7 +1150,6 @@ li {
 }
 .startYourDream h2 {
   font-size: 100px;
-  line-height: 1;
   margin: auto;
   max-width: 840px;
   text-align: center;
@@ -1165,7 +1165,6 @@ li {
 @media (max-width: 767px) {
   .startYourDream h2 {
     font-size: 40px !important;
-    line-height: 1.2 !important;
   }
 }
 
